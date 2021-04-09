@@ -1,4 +1,4 @@
-<header id="header" class="header fixed-top">
+<header id="header" class="fixed-top">
 	<div class="container d-flex align-items-center">
 
 		<h1 class="logo mr-auto"><a href="index.html">Aziz Roaster<span>.</span></a></h1>
