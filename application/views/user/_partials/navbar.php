@@ -1,7 +1,7 @@
 <header id="header" class="fixed-top">
 	<div class="container d-flex align-items-center">
 
-		<h1 class="logo mr-auto"><a href="index.html">BizLand<span>.</span></a></h1>
+		<h1 class="logo mr-auto"><a href="index.html">Aziz Roaster<span>.</span></a></h1>
 		<!-- Uncomment below if you prefer to use an image logo -->
 		<!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
 
@@ -11,7 +11,7 @@
 				<li><a class="nav-link active" href="<?= base_url('Produk') ?>">Produk</a></li>
 				<li><a class="nav-link active" href="<?= base_url('TentangKami') ?>">Tentang Kami</a></li>
 				<li><a class="nav-link active" href="<?= base_url('KontakKami') ?>">Kontak Kami</a></li>
-				<li class="drop-down"><a href="">Drop Down</a>
+				<!-- <li class="drop-down"><a href="">Drop Down</a>
 					<ul>
 						<li><a href="#">Drop Down 1</a></li>
 						<li class="drop-down"><a href="#">Deep Drop Down</a>
@@ -27,7 +27,7 @@
 						<li><a href="#">Drop Down 3</a></li>
 						<li><a href="#">Drop Down 4</a></li>
 					</ul>
-				</li>
+				</li> -->
 
 			</ul>
 		</nav><!-- .nav-menu -->

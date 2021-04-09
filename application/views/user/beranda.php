@@ -20,7 +20,7 @@
 
 	<section id="featured-services" class="featured-services">
       <div class="container" data-aos="fade-up">
-		<h1 class="text-center">Mengapa Memilih RCR Jember?</h1>
+		<h1 class="text-center">Mengapa Memilih Aziz Roaster Jember?</h1>
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -64,15 +64,15 @@
 
         <div class="section-title">
           <!-- <h2>About</h2> -->
-          <h3>Tentang RCR Jember</h3>
+          <h3>Tentang Aziz Roaster Jember</h3>
         </div>
 
         <div class="row">
           <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
-            <img src="<?= base_url('img/about.jpg') ?>" class="img-fluid" alt="">
+            <img src="<?= base_url('img/produk/produk4.jpeg') ?>" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <h3>Coffe Roaster Jember</h3>
+            <h3>Aziz Roaster Jember</h3>
             <p>
               Coffe Roaster Jember adalah sebuah produsen mesin roaster kopi yang berada di kabupaten Jember. Berdiri sejak 2018 dan didirikan oleh Foundernya yaitu mas Aziz, dengan mengutamakan kualitas mesin yang baik Coffe roaster Jember cocok menjadi pilihan anda dalam membuat mesin roating.
             </p>

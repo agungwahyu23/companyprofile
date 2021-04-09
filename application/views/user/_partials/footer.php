@@ -5,7 +5,7 @@
 			<div class="row">
 
 				<div class="col-lg-3 col-md-6 footer-contact">
-					<h3>RCR Jember</h3>
+					<h3>Aziz Roaster Jember</h3>
 					<p>
 						Dusun Gumuk limo RT 22 RW 04 <br>
 						Desa Nogosari<br>
