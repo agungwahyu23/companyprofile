@@ -9,16 +9,16 @@
 						Dashboard
 					</a>
 					<div class="sb-sidenav-menu-heading">Data</div>
-					<a class="nav-link" href="charts.html">
-						<div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+					<a class="nav-link" href="<?= base_url('admin/Pengguna') ?>">
+						<div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
 						Data Admin
 					</a>
-					<a class="nav-link" href="charts.html">
-						<div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+					<a class="nav-link" href="<?= base_url('admin/Produk') ?>">
+						<div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
 						Data Produk
 					</a>
-					<a class="nav-link" href="charts.html">
-						<div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+					<a class="nav-link" href="<?= base_url('admin/Rekening') ?>">
+						<div class="sb-nav-link-icon"><i class="fas fa-credit-card"></i></div>
 						Data Rekening
 					</a>
 					<!-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts"
@@ -74,12 +74,12 @@
 						</nav>
 					</div> -->
 					<div class="sb-sidenav-menu-heading">Transaksi</div>
-					<a class="nav-link" href="tables.html">
-						<div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+					<a class="nav-link" href="<?= base_url('admin/Transaksi') ?>">
+						<div class="sb-nav-link-icon"><i class="far fa-money-bill-alt"></i></div>
 						Data Transaksi
 					</a>
 					<div class="sb-sidenav-menu-heading">Setting Akun</div>
-					<a class="nav-link" href="tables.html">
+					<a class="nav-link" href="<?= base_url('admin/Profil') ?>">
 						<div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
 						Profil Perusahaan
 					</a>
