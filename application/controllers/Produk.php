@@ -8,21 +8,6 @@ class Produk extends CI_Controller {
         $this->load->view('user/produk');   
     }
 
-    public function add()
-    {
-        $this->load->view('admin/pengguna/add');
-    }
-
-    public function edit()
-    {
-        $this->load->view('admin/pengguna/edit');
-    }
-
-    public function detail()
-    {
-        $this->load->view('admin/pengguna/detail');
-    }
-
 }
 
 /* End of file Controllername.php */
