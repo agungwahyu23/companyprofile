@@ -20,7 +20,7 @@
 			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
 				<a class="dropdown-item" href="#">Settings</a>
 				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="login.html">Logout</a>
+				<a class="dropdown-item" href="<?= base_url('admin/Login/logout')?>">Logout</a>
 			</div>
 		</li>
 	</ul>

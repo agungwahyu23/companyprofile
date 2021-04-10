@@ -17,23 +17,24 @@
 									<h3 class="text-center font-weight-light my-4">Login</h3>
 								</div>
 								<div class="card-body">
-									<form>
+									<form method="POST">
+										<?php echo $this->session->flashdata('pesan') ?>
 										<div class="form-group">
 											<label class="small mb-1" for="inputEmailAddress">Email</label>
-											<input class="form-control py-4" id="inputEmailAddress" type="email"
-												placeholder="Enter email address" />
+											<?= form_error('email', '<small class="text-danger pl-2">', '</small>'); ?>
+											<input class="form-control py-4" name="email" id="inputEmailAddress" type="email" placeholder="Masukan Email" />
 										</div>
 										<div class="form-group">
 											<label class="small mb-1" for="inputPassword">Password</label>
-											<input class="form-control py-4" id="inputPassword" type="password"
-												placeholder="Enter password" />
+											<?= form_error('password', '<small class="text-danger pl-2">', '</small>'); ?>
+											<input class="form-control py-4" name="password" id="inputPassword" type="password" placeholder="Masukan Password" />
 										</div>
 										<div class="form-group d-flex align-items-center justify-content-center mt-4 mb-0">
-											<a class="btn btn-primary" href="index.html">Login</a>
+											<button type="submit" class="btn btn-primary">Masuk</button>
 										</div>
 									</form>
 								</div>
-								
+
 							</div>
 						</div>
 					</div>
