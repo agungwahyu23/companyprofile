@@ -26,28 +26,22 @@
 								<div class="row">
 									<div class="form-group col-lg-6 col-sm-12">
 										<label>Nama Lengkap</label>
-										<?= form_error('name', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="name" name="name" type="text"
-											placeholder="Nama Admin" />
+										<?= form_error('nama', '<small class="text-danger pl-2">', '</small>'); ?>
+										<input class="form-control" id="nama" name="nama" type="text"
+											placeholder="Nama Lengkap" />
 									</div>
 									<div class="form-group col-lg-6 col-sm-12">
 										<label>Email </label>
 										<?= form_error('email', '<small class="text-danger pl-2">', '</small>'); ?>
 										<input class="form-control" id="email" name="email" type="text"
-											placeholder="Email Admin" />
+											placeholder="Email" />
 									</div>
 								</div>
 								<div class="row">
-									<div class="form-group col-lg-6 col-sm-12">
-										<label>Password </label>
-										<?= form_error('password', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="password" name="password" type="password"
-											placeholder="Password Admin" />
-									</div>
-									<div class="form-group col-lg-6 col-sm-12">
+									<div class="form-group col-lg-12 col-sm-12">
 										<label>Bagian</label>
-										<?= form_error('pekerjaan', '<small class="text-danger pl-2">', '</small>'); ?>
-										<select class="form-control" name="pekerjaan">
+										<?= form_error('status', '<small class="text-danger pl-2">', '</small>'); ?>
+										<select class="form-control" name="status">
 											<option value="">--PILIH BAGIAN--</option>
 											<option value="Admin">Admin</option>
 											<option value="Karyawan">Karyawan</option>
@@ -56,17 +50,17 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="form-group col-lg-6 col-sm-12">
-										<label>Alamat Rumah</label>
-										<?= form_error('alamat', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="alamat" name="alamat" type="text"
-											placeholder="Alamat Rumah" />
+								<div class="form-group col-lg-6 col-sm-12">
+										<label>Password </label>
+										<?= form_error('password', '<small class="text-danger pl-2">', '</small>'); ?>
+										<input class="form-control" id="password" name="password" type="password"
+											placeholder="Password Admin" />
 									</div>
 									<div class="form-group col-lg-6 col-sm-12">
-										<label>Nomor Hp</label>
-										<?= form_error('no_hp', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="no_hp" name="no_hp" type="text"
-											placeholder="Nomor Hp" />
+										<label>Konfirmasi Password </label>
+										<?= form_error('konfirmasiPassword', '<small class="text-danger pl-2">', '</small>'); ?>
+										<input class="form-control" id="konfirmasiPassword" name="konfirmasiPassword" type="password"
+											placeholder="Konfirmasi Password" />
 									</div>
 								</div>
 							</div>
