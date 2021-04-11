@@ -19,6 +19,7 @@
 						<li class="breadcrumb-item"><a href="<?= base_url('admin/Dashboard') ?>">Dashboard</a></li>
 						<li class="breadcrumb-item active">Data Produk</li>
 					</ol>
+					<?php echo $this->session->flashdata('pesan') ?>
 					<div class="card mb-4">
 						<div class="card-header">
 							<a href="<?= base_url('admin/produk/add') ?>" class="btn btn-success">Tambah Produk</a>
@@ -30,24 +31,28 @@
 										<tr>
 											<th>No</th>
 											<th>Nama</th>
-											<th>Berat</th>
+											<th>Kapasitas</th>
 											<th>Harga</th>
 											<th>Status</th>
 											<th>Aksi</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>1</td>
-                                            <td>Mesin Roasting 500gr</td>
-                                            <td>10Kg</td>
-                                            <td>19.000.000</td>
-                                            <td>Akif</td>
-                                            <td><a href="<?= base_url('admin/Pengguna/detail') ?>"><i class="fas fa-eye" style="color:#444"></i></a>
-                                            <a href="<?= base_url('admin/Pengguna/edit') ?>"><i class="fas fa-cog" style="color:#444"></i></a>
-                                            <a href="#"><i class="fas fa-trash" style="color:#444"></i></a>
-                                            </td>
-										</tr>
+										<?php $i = 1;
+										foreach ($produk as $data) { ?>
+											<tr>
+												<td><?= $i?></td>
+												<td><?= $data['nama']?></td>
+												<td><?= $data['kapasitas']?></td>
+												<td><?= $data['harga']?></td>
+												<td><?= $data['status']?></td>
+												<td><a href="<?= base_url('admin/Pengguna/detail') ?>"><i class="fas fa-eye" style="color:#444"></i></a>
+													<a href="<?= base_url('admin/Pengguna/edit') ?>"><i class="fas fa-cog" style="color:#444"></i></a>
+													<a href="<?= base_url('admin/Produk/hapus/' . $data['idProduk'])?>"><i class="fas fa-trash" style="color:#444"></i></a>
+												</td>
+											</tr>
+										<?php $i++;
+										} ?>
 									</tbody>
 								</table>
 							</div>
@@ -57,9 +62,9 @@
 			</main>
 			<?php $this->load->view("admin/_partials/footer.php") ?>
 		</div>
-    </div>
-    
-    <?php $this->load->view("admin/_partials/js.php") ?>
+	</div>
+
+	<?php $this->load->view("admin/_partials/js.php") ?>
 </body>
 
 </html>
