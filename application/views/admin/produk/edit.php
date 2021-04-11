@@ -14,44 +14,49 @@
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid">
-					<h1 class="mt-4">Data Produk</h1>
+					<h1 class="mt-4">Edit Produk</h1>
 					<ol class="breadcrumb mb-4">
 						<li class="breadcrumb-item"><a href="<?= base_url('admin/Dashboard') ?>">Dashboard</a></li>
-						<li class="breadcrumb-item active">Data Produk</li>
+						<li class="breadcrumb-item active">Edit Produk</li>
 					</ol>
-					<form action="" method="post">
+					<form action="" method="post" enctype="multipart/form-data">
 						<div class="card mb-4">
-							<div class="card-header">Tambah Produk</div>
+							<div class="card-header">Edit Produk</div>
 							<div class="card-body">
 								<div class="row">
-									<div class="form-group col-lg-4 col-sm-12">
+									<div class="form-group col-lg-6 col-sm-12">
 										<label>Nama Produk</label>
-										<?= form_error('name', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="name" name="name" type="text"
-											placeholder="Nama Produk" />
+										<?= form_error('nama', '<small class="text-danger pl-2">', '</small>'); ?>
+										<input class="form-control" id="nama" name="nama" type="text" placeholder="Nama Produk" value="<?= $produk['nama']?>" />
 									</div>
-									<div class="form-group col-lg-4 col-sm-12">
+									<div class="form-group col-lg-6 col-sm-12">
+										<label>Kapasitas</label>
+										<?= form_error('kapasitas', '<small class="text-danger pl-2">', '</small>'); ?>
+										<input class="form-control" id="kapasitas" name="kapasitas" type="number" placeholder="Kapasitas Produk" value="<?= $produk['kapasitas']?>" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-lg-6 col-sm-12">
 										<label>Harga</label>
-										<?= form_error('name', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="name" name="name" type="text"
-											placeholder="Harga Produk" />
+										<?= form_error('harga', '<small class="text-danger pl-2">', '</small>'); ?>
+										<input class="form-control" id="harga" name="harga" type="number" placeholder="Harga Produk" value="<?= $produk['harga']?>" />
 									</div>
-									<div class="form-group col-lg-4 col-sm-12">
+
+									<div class="form-group col-lg-6 col-sm-12">
 										<label>Status</label>
-										<?= form_error('pekerjaan', '<small class="text-danger pl-2">', '</small>'); ?>
+										<?= form_error('status', '<small class="text-danger pl-2">', '</small>'); ?>
 										<select class="form-control" name="status">
 											<option value="">--PILIH STATUS--</option>
-											<option value="1">Publish</option>
-											<option value="2">Draft</option>
-
+											<option value="1" <?= $produk['status'] == 1 ? 'selected' : ''?>>Tampilkan</option>
+											<option value="2" <?= $produk['status'] == 2 ? 'selected' : ''?>>Tidak Ditampilkan</option>
 										</select>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group col-lg-6 col-sm-6">
 										<label>Gambar Produk</label>
-										<input name="gambarProduk" id="banner" type="file" accept="image/*"
-											class="form-control border-dark small mb-3" placeholder="" aria-describedby="basic-addon2" required>
+										<?= form_error('foto', '<small class="text-danger pl-2">', '</small>'); ?>
+										<input name="foto" id="banner" type="file" accept="image/*" class="form-control border-dark small mb-3" placeholder="" aria-describedby="basic-addon2"  >
 									</div>
 									<div class="col-sm-12 col-lg-6">
 										<div class="input-group">
@@ -63,14 +68,21 @@
 								</div>
 								<div class="row">
 									<div class="form-group col-lg-12 col-sm-12">
+										<label>Spesifikasi Produk</label>
+										<?= form_error('spesifikasi', '<small class="text-danger pl-2">', '</small>'); ?>
+										<textarea class="form-control" name="spesifikasi" id="deskripsi"><?= $produk['spesifikasi']?></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-lg-12 col-sm-12">
 										<label>Deskripsi Produk</label>
-										<?= form_error('deskripsiProduk', '<small class="text-danger pl-2">', '</small>'); ?>
-										<textarea class="form-control" name="deskripsiProduk" id="deskripsi"></textarea>
+										<?= form_error('deskripsi', '<small class="text-danger pl-2">', '</small>'); ?>
+										<textarea class="form-control" name="deskripsi" id="deskripsi"><?= $produk['deskripsi']?></textarea>
 									</div>
 								</div>
 							</div>
 						</div>
-						<button name="save" id="save" type="submit" class="btn btn-primary mr-2" href="#">
+						<button type="submit" class="btn btn-primary mr-2" href="#">
 							Simpan
 						</button>
 						<a class="btn btn-danger" href="javascript:history.go(-1)">
@@ -87,24 +99,24 @@
 </body>
 
 <script>
-  CKEDITOR.replace('deskripsi');
+	CKEDITOR.replace('deskripsi');
 </script>
 <script>
-  function readURL(input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
+	function readURL(input) {
+		if (input.files && input.files[0]) {
+			var reader = new FileReader();
 
-      reader.onload = function(e) {
-        $('#preview').attr('src', e.target.result);
-      }
+			reader.onload = function(e) {
+				$('#preview').attr('src', e.target.result);
+			}
 
-      reader.readAsDataURL(input.files[0]); // convert to base64 string
-    }
-  }
+			reader.readAsDataURL(input.files[0]); // convert to base64 string
+		}
+	}
 
-  $("#banner").change(function() {
-    readURL(this);
-  });
+	$("#banner").change(function() {
+		readURL(this);
+	});
 </script>
 
 </html>

@@ -45,9 +45,9 @@
 												<td><?= $data['nama']?></td>
 												<td><?= $data['kapasitas']?></td>
 												<td><?= $data['harga']?></td>
-												<td><?= $data['status']?></td>
-												<td><a href="<?= base_url('admin/Pengguna/detail') ?>"><i class="fas fa-eye" style="color:#444"></i></a>
-													<a href="<?= base_url('admin/Pengguna/edit') ?>"><i class="fas fa-cog" style="color:#444"></i></a>
+												<td><?= $data['status'] == 1 ? 'Tampil' : 'Tidak Ditampilkan'?></td>
+												<td>
+													<a href="<?= base_url('admin/Produk/edit/'. $data['idProduk']) ?>"><i class="fas fa-cog" style="color:#444"></i></a>
 													<a href="<?= base_url('admin/Produk/hapus/' . $data['idProduk'])?>"><i class="fas fa-trash" style="color:#444"></i></a>
 												</td>
 											</tr>
