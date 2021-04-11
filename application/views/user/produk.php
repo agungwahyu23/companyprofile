@@ -38,9 +38,9 @@
                 <ul>
                   <li>Rp. 10.000.000</li>
                 </ul>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Detail</a>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
-                  Sekarang</a>
+                <a href="<?= base_url('Produk/detail/') ?>" class="btn-detail">Detail</a>
+                <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
+                  Sekarang</a> -->
               </div>
             </div>
             <div class="col-lg-3 col-md-3" data-aos="zoom-in" data-aos-delay="200">
@@ -53,9 +53,9 @@
                 <ul>
                   <li>Rp. 10.000.000</li>
                 </ul>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Detail</a>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
-                  Sekarang</a>
+                <a href="<?= base_url('Produk/detail/') ?>" class="btn-detail">Detail</a>
+                <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
+                  Sekarang</a> -->
               </div>
             </div>
             <div class="col-lg-3 col-md-3" data-aos="zoom-in" data-aos-delay="200">
@@ -68,9 +68,9 @@
                 <ul>
                   <li>Rp. 10.000.000</li>
                 </ul>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Detail</a>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
-                  Sekarang</a>
+                <a href="<?= base_url('Produk/detail/') ?>" class="btn-detail">Detail</a>
+                <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
+                  Sekarang</a> -->
               </div>
             </div>
             <div class="col-lg-3 col-md-3" data-aos="zoom-in" data-aos-delay="200">
@@ -83,9 +83,9 @@
                 <ul>
                   <li>Rp. 10.000.000</li>
                 </ul>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Detail</a>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
-                  Sekarang</a>
+                <a href="<?= base_url('Produk/detail/') ?>" class="btn-detail">Detail</a>
+                <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
+                  Sekarang</a> -->
               </div>
             </div>
         </div>

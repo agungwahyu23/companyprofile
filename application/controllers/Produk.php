@@ -8,6 +8,11 @@ class Produk extends CI_Controller {
         $this->load->view('user/produk');   
     }
 
+    public function detail()
+    {
+        $this->load->view('user/detail_produk');
+    }
+
 }
 
 /* End of file Controllername.php */

@@ -24,33 +24,33 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bxs-home"></i></div>
-              <h4 class="title"><a href="#">Produsen Mesin</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <div class="icon"><i class="bx bxs-check-square"></i></div>
+              <h4 class="title"><a href="#">Hasil Kopi Berkualitas</a></h4>
+              <p class="description">Kopi yang dihasilkan akan sangat berkualitas</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
               <div class="icon"><i class='bx bxs-wrench'></i></div>
-              <h4 class="title"><a href="#">Garansi</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <h4 class="title"><a href="#">Kualitas Teruji</a></h4>
+              <p class="description">Setiap mesin telah melalui Quality Control Sehingga Kualitas Teruji</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class='bx bxs-check-square'></i></div>
-              <h4 class="title"><a href="#">Kualitas Terbaik</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <div class="icon"><i class='bx bxs-user-check'></i></div>
+              <h4 class="title"><a href="#">Berpengalaman</a></h4>
+              <p class="description">Kami telah memiliki pengalaman dalam bidang mesin roasting</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class='bx bxs-user-check'></i></i></div>
-              <h4 class="title"><a href="#">Customer First</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <div class="icon"><i class='bx bxs-box'></i></div>
+              <h4 class="title"><a href="#">Bahan Baku Berkualitas</a></h4>
+              <p class="description">Semua Bahan Baku yang Kita Gunakan Berkualitas</p>
             </div>
           </div>
 
@@ -105,9 +105,9 @@
                 <ul>
                   <li>Rp. 10.000.000</li>
                 </ul>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Detail</a>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
-                  Sekarang</a>
+                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Selengkapnya</a>
+                <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
+                  Sekarang</a> -->
               </div>
             </div>
             <div class="col-lg-3 col-md-3" data-aos="zoom-in" data-aos-delay="200">
@@ -120,9 +120,9 @@
                 <ul>
                   <li>Rp. 10.000.000</li>
                 </ul>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Detail</a>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
-                  Sekarang</a>
+                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Selengkapnya</a>
+                <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
+                  Sekarang</a> -->
               </div>
             </div>
             <div class="col-lg-3 col-md-3" data-aos="zoom-in" data-aos-delay="200">
@@ -135,9 +135,9 @@
                 <ul>
                   <li>Rp. 10.000.000</li>
                 </ul>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Detail</a>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
-                  Sekarang</a>
+                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Selengkapnya</a>
+                <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
+                  Sekarang</a> -->
               </div>
             </div>
             <div class="col-lg-3 col-md-3" data-aos="zoom-in" data-aos-delay="200">
@@ -150,9 +150,9 @@
                 <ul>
                   <li>Rp. 10.000.000</li>
                 </ul>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Detail</a>
-                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
-                  Sekarang</a>
+                <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-detail">Selengkapnya</a>
+                <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
+                  Sekarang</a> -->
               </div>
             </div>
         </div>
@@ -163,12 +163,15 @@
 	<section id="testimonials" class="testimonials">
       <div class="container" data-aos="zoom-in">
 
-        <div class="owl-carousel testimonials-carousel">
+        <!-- <div class="owl-carousel testimonials-carousel"> -->
+          <h1>Dapatkan Mesin Roasting Berkualitas</h1>
+          <p>Anda Berpeluang Menjadi Pebisnis Kopi Sukses dan Bisa Ekspor Kopi ke Berbagai Provinsi bahkan Berbagai Negara dengan Mesin Roasting Berkualitas</p>
+          <a href="#" class="btn btn-beli text-align-center"><i class="bi bi-whatsapp"></i> Beli Sekarang</a>
 
-          <div class="testimonial-item">
+          <!-- <div class="testimonial-item">
             <img src="<?= base_url('') ?>img/testimonials/testi.png" class="testimonial-img" alt="">
             <h3>Kopi Janji Jiwa</h3>
-            <!-- <h4>Ceo &amp; Founder</h4> -->
+            
             <p>
               <i class="bx bxs-quote-alt-left quote-icon-left"></i>
               Beli mesin roasting di RCR Jember puas sekali, mesin berkualitas harga juga pas.
@@ -179,7 +182,7 @@
           <div class="testimonial-item">
             <img src="<?= base_url('') ?>img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
             <h3>Jember Coffe Shop</h3>
-            <!-- <h4>Designer</h4> -->
+            
             <p>
               <i class="bx bxs-quote-alt-left quote-icon-left"></i>
               Pelayanan sangat baik, dipandu dalam menngunakan mesin roasting hingga bisa.
@@ -190,15 +193,17 @@
           <div class="testimonial-item">
             <img src="<?= base_url('') ?>img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
             <h3>Budianto</h3>
-            <!-- <h4>Store Owner</h4> -->
+            
             <p>
               <i class="bx bxs-quote-alt-left quote-icon-left"></i>
               Fast respon, memberikan banyak masukan tentang mesin roasting yang cocok dan sesuai dengan usaha yang saya jalankan.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-          </div>
+          </div> -->
 
-        </div>
+
+
+        <!-- </div> -->
 
       </div>
     </section>
