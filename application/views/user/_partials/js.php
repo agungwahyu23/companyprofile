@@ -14,7 +14,7 @@
   <!-- Template Main JS File -->
   <script src="<?= base_url('js/user/main.js') ?>"></script>
 
-  <script>
+  <!-- <script>
     let allImages = document.querySelectorAll("img");
       allImages.forEach((value)=>{
         value.oncontextmenu = (e)=>{
@@ -27,4 +27,4 @@
     $('body').on('contextmenu', function(e) {
         return false;
     });
-</script>
+</script> -->

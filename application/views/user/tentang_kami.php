@@ -24,7 +24,7 @@
 
         <div class="row">
           <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
-            <img src="<?= base_url('img/Produk/produk8.jpeg') ?>" class="img-fluid" alt="">
+            <img src="<?= base_url('img/Produk/produk8.jpeg') ?>" class="img-fluid-about" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <h3>Sejarah Aziz Coffe Roaster</h3>
@@ -54,74 +54,75 @@
     </section>
 
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+    	<div class="container" data-aos="fade-up">
 
-        <div class="row">
-          <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
-            <img src="<?= base_url('img/ilustrasi/coffee_break.svg') ?>" class="" width="500px" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <ul>
-              <li>
-              <i class='bx bx-cog'></i>
-                <div>
-                  <h5>Mengutamakan Kualitas</h5>
-                  <p>Kami selalu mengedepankan menjaga kualitas produk yang kami hadirkan untuk Anda</p>
-                </div>
-              </li>
-              <li>
-                <i class="fa fa-group"></i>
-                <div>
-                  <h5>SDM berkualitas</h5>
-                  <p>Terdiri dari Sumber Daya Manusia yang handal dibidangnya untuk menciptakan produk terbaik</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+    		<div class="row">
+    			<div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
+    				<img src="<?= base_url('img/ilustrasi/coffee_break.svg') ?>" class="" width="500px" alt="">
+    			</div>
+    			<div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up"
+    				data-aos-delay="100">
+    				<ul>
+    					<li>
+    						<i class='bx bx-cog'></i>
+    						<div>
+    							<h5>Mengutamakan Kualitas</h5>
+    							<p>Kami selalu mengedepankan menjaga kualitas produk yang kami hadirkan untuk Anda</p>
+    						</div>
+    					</li>
+    					<li>
+    						<i class="fa fa-group"></i>
+    						<div>
+    							<h5>SDM berkualitas</h5>
+    							<p>Terdiri dari Sumber Daya Manusia yang handal dibidangnya untuk menciptakan produk terbaik</p>
+    						</div>
+    					</li>
+    				</ul>
+    			</div>
+    		</div>
 
-      </div>
+    	</div>
     </section>
 
     <section id="featured-services" class="featured-services">
-      <div class="container" data-aos="fade-up">
-		<h1 class="text-center">Mengapa Memilih Aziz Roaster Jember?</h1>
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bxs-home"></i></div>
-              <h4 class="title"><a href="#">Produsen Mesin</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
+    	<div class="container" data-aos="fade-up">
+    		<h1 class="text-center">Mengapa Memilih Aziz Roaster Jember?</h1>
+    		<div class="row">
+    			<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+    				<div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+    					<div class="icon"><i class="bx bxs-check-square"></i></div>
+    					<h4 class="title"><a href="#">Hasil Kopi Berkualitas</a></h4>
+    					<p class="description">Kopi yang dihasilkan akan sangat berkualitas</p>
+    				</div>
+    			</div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class='bx bxs-wrench'></i></div>
-              <h4 class="title"><a href="#">Garansi</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
+    			<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+    				<div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+    					<div class="icon"><i class='bx bxs-wrench'></i></div>
+    					<h4 class="title"><a href="#">Kualitas Teruji</a></h4>
+    					<p class="description">Setiap mesin telah melalui Quality Control Sehingga Kualitas Teruji</p>
+    				</div>
+    			</div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class='bx bxs-check-square'></i></div>
-              <h4 class="title"><a href="#">Kualitas Terbaik</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
+    			<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+    				<div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+    					<div class="icon"><i class='bx bxs-user-check'></i></div>
+    					<h4 class="title"><a href="#">Berpengalaman</a></h4>
+    					<p class="description">Kami telah memiliki pengalaman dalam bidang mesin roasting</p>
+    				</div>
+    			</div>
 
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class='bx bxs-user-check'></i></i></div>
-              <h4 class="title"><a href="#">Customer First</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
+    			<div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+    				<div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+    					<div class="icon"><i class='bx bxs-box'></i></div>
+    					<h4 class="title"><a href="#">Bahan Baku Berkualitas</a></h4>
+    					<p class="description">Semua Bahan Baku yang Kita Gunakan Berkualitas</p>
+    				</div>
+    			</div>
 
-        </div>
+    		</div>
 
-      </div>
+    	</div>
     </section>
 
     <section id="contact" class="contact">
