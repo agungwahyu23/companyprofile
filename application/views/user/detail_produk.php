@@ -34,9 +34,9 @@
 
 				<div class="col-lg-5">
 					<div class="portfolio-info">
-						<h3>Mesin Roasting Kapasitas 1,5Kg</h3>
+						<h3><?= $produk['nama']?> <?= $produk['kapasitas']?> Gram</h3>
 						<h6>Harga:</h6>
-                        <h3>Rp. 19.000.000</h3>
+                        <h3>Rp. <?= number_format($produk['harga'], 2)?></h3>
                         <a href="#" class="btn btn-pesan">Pesan Sekarang</a>
 					</div>
 					

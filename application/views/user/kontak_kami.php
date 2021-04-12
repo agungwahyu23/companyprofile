@@ -27,7 +27,7 @@
             <div class="info-box mb-4">
               <i class="bx bx-map"></i>
               <h3>Alamat</h3>
-              <p>Dusun Gumuk limo RT 22 RW 04, Desa Nogosari, <br> Kecamatan Rambipuji, Kabupaten Jember</p>
+              <p><?= $profil['alamat']?></p>
             </div>
           </div>
 
@@ -35,7 +35,7 @@
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
               <h3>Email</h3>
-              <p>contact@gmail.com</p>
+              <p><?= $profil['email']?></p>
             </div>
           </div>
 
@@ -43,7 +43,7 @@
             <div class="info-box  mb-4">
               <i class="bx bx-phone-call"></i>
               <h3>Telepon / WA</h3>
-              <p>082318326878</p>
+              <p><?= $profil['wa']?></p>
             </div>
           </div>
 

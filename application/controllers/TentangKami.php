@@ -12,7 +12,8 @@ class TentangKami extends CI_Controller
 
     public function index()
     {
-        $this->load->view('user/tentang_kami');   
+        $data['profil'] = $this->db->get('profile')->row_array();
+        $this->load->view('user/tentang_kami', $data);   
     }
 }
     

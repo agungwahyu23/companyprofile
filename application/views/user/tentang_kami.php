@@ -9,7 +9,7 @@
 
     <section id="hero-half" class="d-flex align-items-center text-center" style="background-image: url(<?= base_url('img/produk/produk10.jpeg'); ?>)">
     	<div class="container" data-aos="zoom-out" data-aos-delay="100">
-    		<h1>TENTANG AZIZ ROASTER
+    		<h1>Tentang <?= $profil['nama']?>
     		</h1>
     	</div>
     </section>
@@ -27,7 +27,7 @@
             <img src="<?= base_url('img/Produk/produk8.jpeg') ?>" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <h3>Sejarah Aziz Coffe Roaster</h3>
+            <h3>Sejarah <?= $profil['nama']?></h3>
             <!-- <ul>
               <li>
                 <i class="bx bx-store-alt"></i>
