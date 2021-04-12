@@ -5,12 +5,18 @@ class Produk extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('user/produk');   
+        $data['produk'] = $this->db->get('produk')->result_array();
+        $this->load->view('user/produk', $data);   
     }
 
-    public function detail()
+    public function detail($id = null)
     {
-        $this->load->view('user/detail_produk');
+        if($id){
+            $data['produk'] = $this->db->get_where('produk', ['idProduk' => $id])->row_array();
+            $this->load->view('user/detail_produk', $data);
+        }else{
+            redirect(base_url('Produk'));
+        }
     }
 
 }
