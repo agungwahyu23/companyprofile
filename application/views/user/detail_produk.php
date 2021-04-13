@@ -114,9 +114,15 @@
     						<!-- Post -->
     						<di v class="post">
     							<!-- /.user-block -->
+								<p>
+									<h6>Deskripsi:</h6>
+									<?= $produk['deskripsi']?>
+								</p>
     							<p>
+									<h6>Spesifikasi:</h6>
 									<?= $produk['spesifikasi']?>
     							</p>
+								
     					</div>
     					<!-- /.post -->
 
