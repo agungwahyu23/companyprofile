@@ -21,6 +21,7 @@
   <link href="<?= base_url('assets/user/owl.carousel/assets/owl.carousel.min.css') ?>" rel="stylesheet">
   <link href="<?= base_url('assets/user/venobox/venobox.css') ?>" rel="stylesheet">
   <link href="<?= base_url('assets/user/aos/aos.css') ?>" rel="stylesheet">
+  <link href="<?= base_url('assets/user/remixicon/remixicon.css')?>" rel="stylesheet">
   <link href="<?= base_url('assets/user/glightbox/css/glightbox.min.css')?>" rel="stylesheet">
 
   <!-- Template Main CSS File -->
