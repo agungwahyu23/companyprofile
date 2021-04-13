@@ -219,20 +219,20 @@
           <form action="<?= base_url('Beranda/kritik') ?>" method="post" role="form">
             <div class="form-row">
               <div class="col form-group">
-                <input type="text" name="nama" class="form-control" id="name" placeholder="Masukkan Nama Anda" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="nama" class="form-control" id="name" placeholder="Masukkan Nama Anda" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required/>
                 <div class="validate"></div>
               </div>
               <div class="col form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email Anda" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email Anda" data-rule="email" data-msg="Please enter a valid email" required/>
                 <div class="validate"></div>
               </div>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
               <div class="validate"></div>
             </div>
             <div class="form-group">
-              <textarea class="form-control" name="pesan" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Masukkan Pesan"></textarea>
+              <textarea class="form-control" name="pesan" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Masukkan Pesan" required></textarea>
               <div class="validate"></div>
             </div>
             <div class="text-center"><button type="submit" class="btn btn-success">Kirim</button></div>

@@ -38,6 +38,20 @@ class Produk extends CI_Controller
             if ($this->upload->do_upload('foto')) {
                 $namaFoto = $this->upload->data('file_name');
 
+                $config['image_library']    = 'gd2';
+                $config['source_image']     = './img/Produk/' . $namaFoto;
+                //lokasi folder gbr
+                $config['new_image']    = './img/Produk/';
+                $config['create_thumb']     = TRUE;
+                $config['maintain_ratio']   = TRUE;
+                $config['quality']          = '100%';
+                $config['width']            = 383;
+                $config['height']           = 259;
+                $config['thumb_marker']     = '';
+
+                $this->load->library('image_lib', $config);
+                $this->image_lib->resize();
+
                 $data = [
                     'idProduk' => $this->Models->randomkode(32),
                     'nama' => $this->input->post('nama'),
@@ -129,6 +143,20 @@ class Produk extends CI_Controller
 
                             $fotobaru = $this->upload->data('file_name');
 
+                            $config['image_library']    = 'gd2';
+                            $config['source_image']     = './img/Produk/' . $fotobaru;
+                            //lokasi folder gbr
+                            $config['new_image']    = './img/Produk/';
+                            $config['create_thumb']     = TRUE;
+                            $config['maintain_ratio']   = TRUE;
+                            $config['quality']          = '100%';
+                            $config['width']            = 383;
+                            $config['height']           = 259;
+                            $config['thumb_marker']     = '';
+
+                            $this->load->library('image_lib', $config);
+                            $this->image_lib->resize();
+
                             $this->db->set('foto', $fotobaru);
 
                             $this->db->where('idProduk', $id);
@@ -212,8 +240,9 @@ class Produk extends CI_Controller
         }
     }
 
-    public function hapusGaleri($id= null){
-        if($id){
+    public function hapusGaleri($id = null)
+    {
+        if ($id) {
 
             $galeri = $this->db->get_where('galeri', ['idGaleri' => $id])->row_array();
 
@@ -221,8 +250,8 @@ class Produk extends CI_Controller
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
                             Berhasil Menghapus Foto!
                             </div>');
-                            redirect('admin/Produk/tambahfoto/' . $galeri['idProduk']);
-        }else{
+            redirect('admin/Produk/tambahfoto/' . $galeri['idProduk']);
+        } else {
             redirect('admin/Produk');
         }
     }
@@ -261,7 +290,21 @@ class Produk extends CI_Controller
 
                 $fotobaru = $this->upload->data('file_name');
 
-                $data =[
+                $config['image_library']    = 'gd2';
+                $config['source_image']     = './img/Produk/' . $fotobaru;
+                //lokasi folder gbr
+                $config['new_image']    = './img/Produk/';
+                $config['create_thumb']     = TRUE;
+                $config['maintain_ratio']   = TRUE;
+                $config['quality']          = '100%';
+                $config['width']            = 383;
+                $config['height']           = 259;
+                $config['thumb_marker']     = '';
+
+                $this->load->library('image_lib', $config);
+                $this->image_lib->resize();
+
+                $data = [
                     'idGaleri' => $this->Models->randomkode(32),
                     'idProduk' => $id,
                     'foto' => $fotobaru
@@ -274,7 +317,7 @@ class Produk extends CI_Controller
     
                             </div>');
 
-                redirect('admin/Produk/tambahfoto/' .$id);
+                redirect('admin/Produk/tambahfoto/' . $id);
             } else {
 
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">'

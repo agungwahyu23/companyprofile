@@ -75,26 +75,9 @@
                                             <img style="height: 100px; width: 100px;" src="<?= base_url('img/Produk/') . $data['foto'] ?>" alt="">
                                         </td>
                                         <td>
-                                            <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-trash" style="color:#444"></i></a>
+                                            <a href="<?= base_url('img/Produk/' . $data['foto']) ?>"><i class="fas fa-eye" style="color:#444"></i></a>
+                                            <a class="btn btn-datatable btn-icon btn-transparent-dark" onclick="confirm_hapus('<?php echo base_url('admin/Produk/hapusGaleri/' . $data['idGaleri']) ?>')" data-toggle="modal" data-target="#modalDelete"><i class="fas fa-trash"></i></a>
 
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Peringatan!</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            Apakah anda yakin untuk menghapus foto ini ?
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                                                            <a href="<?= base_url('admin/Produk/hapusGaleri/' . $data['idGaleri']) ?>" class="btn btn-primary">Ya, Hapus.</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
 
                                         </td>
                                     </tr>
@@ -103,7 +86,23 @@
                             </tbody>
                         </table>
                     </div>
-
+                    <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteModalLabel">Hapus Data</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Apakah Anda yakin untuk hapus data?</div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-primary" type="button" data-dismiss="modal">Batal</button>
+                                    <a class="btn btn-danger" id="delete_link" type="button" href="">Hapus</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
             <?php $this->load->view("admin/_partials/footer.php") ?>
@@ -133,7 +132,16 @@
         readURL(this);
     });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+<script>
+    function confirm_hapus(add) {
+        $('#modalDelete').modal('show', {
+            backdrop: 'static'
+        });
+        document.getElementById('delete_link').setAttribute('href', add);
+    }
+</script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script> -->
 
 </html>

@@ -33,6 +33,7 @@
 											<th>Nama</th>
 											<th>Kapasitas</th>
 											<th>Harga</th>
+											<th>Foto</th>
 											<th>Status</th>
 											<th>Aksi</th>
 										</tr>
@@ -44,7 +45,8 @@
 												<td><?= $i ?></td>
 												<td><?= $data['nama'] ?></td>
 												<td><?= $data['kapasitas'] ?></td>
-												<td><?= $data['harga'] ?></td>
+												<td>Rp. <?= number_format($data['harga'], 2) ?></td>
+												<td><a href="<?= base_url('img/Produk/') . $data['foto']?>">Lihat</a></td>
 												<td><?= $data['status'] == 1 ? 'Tampil' : 'Tidak Ditampilkan' ?></td>
 												<td>
 													<a href="<?= base_url('admin/Produk/edit/' . $data['idProduk']) ?>"><i class="fas fa-cog" style="color:#444"></i></a>
