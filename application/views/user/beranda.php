@@ -8,7 +8,7 @@
 <body>
   <?php $this->load->view('user/_partials/navbar.php') ?>
 
-  <section id="hero" class="d-flex align-items-center" style="background-image: url(<?= base_url('img/Union.png'); ?>)">
+  <section id="hero" class="d-flex align-items-center" style="background-image: url(<?= base_url('img/roasting.jpg'); ?>)">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <h1><?= $profil['nama'] ?> <br>JEMBER
       </h1>
@@ -105,7 +105,7 @@
 
       <div class="row gy-4" data-aos="fade-left">
         <?php foreach ($produk as $data) { ?>
-          <div class="col-lg-3 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-lg-3 col-md-3 col-produk" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="box-header">
                 <img src="<?= base_url('img/Produk/produk1.jpeg') ?>" class="img-fluid" alt="">

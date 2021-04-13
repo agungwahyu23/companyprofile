@@ -37,8 +37,8 @@
 						<h3><?= $produk['nama']?> <?= $produk['kapasitas']?> Gram</h3>
 						<h6>Harga:</h6>
                         <h3>Rp. <?= number_format($produk['harga'], 2)?></h3>
-                        <a href="<?= base_url('Pesan') ?>" class="btn btn-pesan">Pesan Sekarang</a>
-                        <!-- <a href="https://api.whatsapp.com/send?phone=<?= $profile['wa'] ?>&text=Selamat Pagi%21%20Saya%20berminat%20membeli%20<?= $produk['nama']?>" class="btn btn-pesan">Pesan Sekarang</a> -->
+                        <!-- <a href="<?= base_url('Pesan') ?>" class="btn btn-pesan">Pesan Sekarang</a> -->
+                        <a href="https://api.whatsapp.com/send?phone=<?= $profile['wa'] ?>&text=Selamat Pagi%21%20Saya%20berminat%20membeli%20<?= $produk['nama']?>" class="btn btn-pesan">Pesan Sekarang</a>
 					</div>
 					
 				</div>
@@ -114,9 +114,15 @@
     						<!-- Post -->
     						<di v class="post">
     							<!-- /.user-block -->
+								<p>
+									<h6>Deskripsi:</h6>
+									<?= $produk['deskripsi']?>
+								</p>
     							<p>
+									<h6>Spesifikasi:</h6>
 									<?= $produk['spesifikasi']?>
     							</p>
+								
     					</div>
     					<!-- /.post -->
 
