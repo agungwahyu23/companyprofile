@@ -41,14 +41,15 @@
 										<?php $i = 1;
 										foreach ($produk as $data) { ?>
 											<tr>
-												<td><?= $i?></td>
-												<td><?= $data['nama']?></td>
-												<td><?= $data['kapasitas']?></td>
-												<td><?= $data['harga']?></td>
-												<td><?= $data['status'] == 1 ? 'Tampil' : 'Tidak Ditampilkan'?></td>
+												<td><?= $i ?></td>
+												<td><?= $data['nama'] ?></td>
+												<td><?= $data['kapasitas'] ?></td>
+												<td><?= $data['harga'] ?></td>
+												<td><?= $data['status'] == 1 ? 'Tampil' : 'Tidak Ditampilkan' ?></td>
 												<td>
-													<a href="<?= base_url('admin/Produk/edit/'. $data['idProduk']) ?>"><i class="fas fa-cog" style="color:#444"></i></a>
-													<a href="<?= base_url('admin/Produk/hapus/' . $data['idProduk'])?>"><i class="fas fa-trash" style="color:#444"></i></a>
+													<a href="<?= base_url('admin/Produk/edit/' . $data['idProduk']) ?>"><i class="fas fa-cog" style="color:#444"></i></a>
+													<a href="<?= base_url('admin/Produk/tambahFoto/' . $data['idProduk']) ?>"><i class="fas fa-images" style="color:#444"></i></a>
+													<a href="<?= base_url('admin/Produk/hapus/' . $data['idProduk']) ?>"><i class="fas fa-trash" style="color:#444"></i></a>
 												</td>
 											</tr>
 										<?php $i++;

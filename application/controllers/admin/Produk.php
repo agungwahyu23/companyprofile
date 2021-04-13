@@ -186,6 +186,7 @@ class Produk extends CI_Controller
     {
         $this->load->view('admin/produk/detail');
     }
+
     public function hapus($id = null)
     {
         if ($id) {
@@ -193,9 +194,99 @@ class Produk extends CI_Controller
 
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Produk Berhasil Dihapus</div>');
 
-            redirect('admin/Produk');
+            redirect('admin/Produk/tambahFoto/' . $id);
         } else {
             redirect('admin/Produk');
+        }
+    }
+
+
+    public function tambahfoto($id = null)
+    {
+        if ($id) {
+            $data['produk'] = $this->db->get('produk', ['idProduk' => $id])->row_array();
+            $data['galeri'] = $this->db->get_where('galeri', ['idProduk' => $id])->result_array();
+            $this->load->view('admin/produk/tambahFoto', $data);
+        } else {
+            redirect('admin/Produk');
+        }
+    }
+
+    public function hapusGaleri($id= null){
+        if($id){
+
+            $galeri = $this->db->get_where('galeri', ['idGaleri' => $id])->row_array();
+
+            $this->db->delete('galeri', ['idGaleri' => $id]);
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
+                            Berhasil Menghapus Foto!
+                            </div>');
+                            redirect('admin/Produk/tambahfoto/' . $galeri['idProduk']);
+        }else{
+            redirect('admin/Produk');
+        }
+    }
+
+    public function uploadGaleri()
+    {
+        $id = $this->input->post('id');
+        $ubahfoto = $_FILES['foto']['name'];
+
+
+
+        if ($ubahfoto) {
+
+            $config['allowed_types'] = 'jpg|jpeg|png|gif';
+
+            $config['max_size'] = '2048';
+
+            $config['upload_path'] = './img/Produk/';
+
+
+
+            $this->load->library('upload', $config);
+
+
+
+            if ($this->upload->do_upload('foto')) {
+
+                $data = $this->db->get_where('produk', ['idProduk' => $id])->row_array();
+
+                $fotolama = $data['gambar'];
+
+                if ($fotolama) {
+
+                    unlink(FCPATH . './img/Produk/' . $fotolama);
+                }
+
+                $fotobaru = $this->upload->data('file_name');
+
+                $data =[
+                    'idGaleri' => $this->Models->randomkode(32),
+                    'idProduk' => $id,
+                    'foto' => $fotobaru
+                ];
+                $this->db->insert('galeri', $data);
+
+                $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
+    
+                            Berhasil Menambahkan Foto!
+    
+                            </div>');
+
+                redirect('admin/Produk/tambahfoto/' .$id);
+            } else {
+
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">'
+
+                    . $this->upload->display_errors() .
+
+                    '</div>');
+
+                // redirect('user/editprofile');
+
+                redirect('admin/Produk');
+            }
         }
     }
 }
