@@ -17,7 +17,7 @@
         <a href="<?= base_url('Produk') ?>" class="btn-get-started scrollto">Produk Kami</a>
 
       </div>
-      <div class="row mt-3">
+      <div class="row mt-3 mb-5">
         <div class="col-lg4 col-md-6 text-center">
           <?php echo $this->session->flashdata('pesan') ?>
 

@@ -44,7 +44,7 @@
 												<td><?= $data['subject']?></td>
 												<td><?= $data['isi'] ?></td>
 												<td>
-													<a href="<?= base_url('admin/Produk/hapus/' . $data['idProduk'])?>"><i class="fas fa-trash" style="color:#444"></i></a>
+													<a href="<?= base_url('admin/Kritik/hapus/' . $data['idKritik'])?>"><i class="fas fa-trash" style="color:#444"></i></a>
 												</td>
 											</tr>
 										<?php $i++;
