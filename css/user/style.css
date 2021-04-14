@@ -1145,7 +1145,7 @@ section {
 
 .section-title h3 {
   margin: 15px 0 0 0;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -1305,6 +1305,15 @@ section {
   width: 100%;
   object-position: center;
   object-fit: cover;
+}
+
+@media (min-width:0px) and (max-width:768px) {
+  .about .img-fluid-about{
+    height: 300px;
+  }
+  .about .ilustrasi{
+    width: 100%;
+  }
 }
 .about .content h3 {
   font-weight: 600;
@@ -2335,6 +2344,17 @@ section {
   text-decoration: line-through;
 }
 
+.pricing .kapasitas span{
+  font-size: 18px;
+  color: #444444;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  text-align: left;
+  display: flex;
+}
+
 .pricing .nama-product span{
   font-size: 18px;
   padding-top: 15px;
@@ -2452,6 +2472,12 @@ section {
     font-weight: 600;
     display: flex;
   }
+  .pricing .kapasitas  {
+    font-size: 16px;
+    color: #444444;
+    font-weight: 600;
+    display: flex;
+  }
   .pricing .box-header{
     height: 100px;
     overflow: hidden;
@@ -2472,6 +2498,12 @@ section {
     color: #444444;
     font-size: 14px;
   }
+  .pricing .kapasitas span{
+    /* padding: 0; */
+    list-style: none;
+    color: #444444;
+    font-size: 14px;
+  }
   .pricing .box-header{
     height: 100px;
     overflow: hidden;
@@ -2485,7 +2517,7 @@ section {
     /* border-radius: 50px; */
     color: #ffffff;
     transition: none;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 400;
     transition: 0.3s;
     box-shadow: 0px 0 10px rgba(1, 42, 112, 0.144);
@@ -2495,7 +2527,7 @@ section {
     background: #0a4d00;
   }
   .pricing ul {
-    font-size: 12px;
+    font-size: 13px;
     /* padding-top: 10px;
     color: #444444;
     font-weight: 600;
