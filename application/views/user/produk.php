@@ -33,7 +33,7 @@
           <div class="col-lg-3 col-md-3 col-produk" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="box-header">
-                <img src="<?= base_url('img/Produk/produk1.jpeg') ?>" class="img-fluid" alt="">
+                <img src="<?= base_url('img/Produk/' . $data['foto']) ?>" class="img-fluid" alt="">
               </div>
 
               <div class="nama-product"><span><?= $data['nama']?></span></div>

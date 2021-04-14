@@ -18,7 +18,7 @@ class Produk extends CI_Controller
 
     public function add()
     {
-        $this->form_validation->set_rules('nama', 'Nama Produk', 'required|is_unique[produk.nama]');
+        $this->form_validation->set_rules('nama', 'Nama Produk', 'required');
         $this->form_validation->set_rules('kapasitas', 'Kapasitas Produk', 'required');
         $this->form_validation->set_rules('status', 'Status Produk', 'required');
         $this->form_validation->set_rules('harga', 'Harga Produk', 'required');
@@ -30,7 +30,7 @@ class Produk extends CI_Controller
 
             $config['allowed_types'] = 'jpg|png|gif|jpeg';
 
-            $config['max_size'] = '7748';
+            $config['max_size'] = '5000';
 
             $config['upload_path'] = './img/Produk';
 
@@ -45,8 +45,8 @@ class Produk extends CI_Controller
                 $config['create_thumb']     = TRUE;
                 $config['maintain_ratio']   = TRUE;
                 $config['quality']          = '100%';
-                $config['width']            = 383;
-                $config['height']           = 259;
+                $config['width']            = 1000;
+                $config['height']           = 1000;
                 $config['thumb_marker']     = '';
 
                 $this->load->library('image_lib', $config);
@@ -100,7 +100,6 @@ class Produk extends CI_Controller
                 $this->load->view('admin/produk/edit', $data);
             } else {
                 $data = [
-                    'idProduk' => $this->Models->randomkode(32),
                     'nama' => $this->input->post('nama'),
                     'kapasitas' => $this->input->post('kapasitas'),
                     'harga' => $this->input->post('harga'),
@@ -120,7 +119,7 @@ class Produk extends CI_Controller
 
                         $config['allowed_types'] = 'jpg|jpeg|png|gif';
 
-                        $config['max_size'] = '2048';
+                        $config['max_size'] = '5000';
 
                         $config['upload_path'] = './img/Produk/';
 
@@ -142,6 +141,7 @@ class Produk extends CI_Controller
                             }
 
                             $fotobaru = $this->upload->data('file_name');
+                           
 
                             $config['image_library']    = 'gd2';
                             $config['source_image']     = './img/Produk/' . $fotobaru;
@@ -149,27 +149,32 @@ class Produk extends CI_Controller
                             $config['new_image']    = './img/Produk/';
                             $config['create_thumb']     = TRUE;
                             $config['maintain_ratio']   = TRUE;
-                            $config['quality']          = '100%';
-                            $config['width']            = 383;
-                            $config['height']           = 259;
+                            $config['quality']          = '50%';
+                            $config['width']            = 1000;
+                            $config['height']           = 1000;
                             $config['thumb_marker']     = '';
 
                             $this->load->library('image_lib', $config);
                             $this->image_lib->resize();
 
-                            $this->db->set('foto', $fotobaru);
+                            // $this->db->set('foto', $fotobaru);
 
                             $this->db->where('idProduk', $id);
 
-                            $this->db->update('produk');
+                            $updatelagi = $this->db->update('produk', ['foto' => $fotobaru]);
 
-                            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
+                            //  var_dump($fotobaru);die;
+                            if($updatelagi){
+                                $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
+        
+                                Berhasil Mengubah Data!
+        
+                                </div>');
     
-                            Berhasil Mengubah Data!
-    
-                            </div>');
-
-                            redirect('admin/Produk');
+                                redirect('admin/Produk');
+                            }else{
+                                var_dump('gugu');die;
+                            }
                         } else {
 
                             $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">'
@@ -297,8 +302,10 @@ class Produk extends CI_Controller
                 $config['create_thumb']     = TRUE;
                 $config['maintain_ratio']   = TRUE;
                 $config['quality']          = '100%';
-                $config['width']            = 383;
-                $config['height']           = 259;
+                // $config['width']            = 383;
+                // $config['height']           = 259;
+                $config['width']            = 500;
+                $config['height']           = 450;
                 $config['thumb_marker']     = '';
 
                 $this->load->library('image_lib', $config);
