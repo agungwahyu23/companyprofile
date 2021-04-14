@@ -2059,7 +2059,7 @@ section {
 }
 
 .portfolio-details .portfolio-info {
-  padding: 10px;
+  padding: 30px;
   /* box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08); */
 }
 
@@ -2109,17 +2109,13 @@ section {
   color: #000000;
 }
 
-@media (min-width:0px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .portfolio-details .portfolio-description h2 {
     width: 100%;
   }
   .portfolio-details .portfolio-info {
     position: static;
-    margin-top: 0px;
-  }
-  .portfolio-details .portfolio-details-slider img{
-    height: 200px;
-    object-fit: cover;
+    margin-top: 30px;
   }
 }
 
@@ -2275,14 +2271,11 @@ section {
   padding: 0;
   list-style: none;
   color: #444444;
-  text-align: left;
-  padding-left: 25px;
+  text-align: center;
+  /* padding-left: 25px; */
   line-height: 26px;
   font-size: 16px;
   margin-bottom: 10px;
-}
-.pricing ul li {
-  padding-bottom: 10px;
 }
 
 /* .pricing .box ul {
@@ -2307,12 +2300,12 @@ section {
 }
 
 .pricing .nama-product span{
-  font-size: 16px;
+  font-size: 18px;
   padding-top: 15px;
   color: #444444;
   font-weight: 600;
-  justify-content: left;
-  padding-left: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
   align-items: center;
   display: flex;
 }
@@ -2408,7 +2401,11 @@ section {
     width: 50%;
   }
   .pricing .nama-product  {
+    font-size: 16px;
     padding-top: 10px;
+    color: #444444;
+    font-weight: 600;
+    display: flex;
   }
   .pricing .box-header{
     height: 100px;
@@ -2425,14 +2422,10 @@ section {
     width: 50%;
   }
   .pricing .nama-product span{
-    font-size: 14px;
-    padding-top: 10px;
+    /* padding: 0; */
+    list-style: none;
     color: #444444;
-    font-weight: 600;
-    padding-left: 10px;
-    text-align: left;
-    align-items: left;
-    display: flex;
+    font-size: 14px;
   }
   .pricing .box-header{
     height: 100px;
@@ -2457,14 +2450,12 @@ section {
     background: #0a4d00;
   }
   .pricing ul {
-    padding: 0;
-    list-style: none;
-    color: #444444;
-    text-align: left;
-    padding-left: 10px;
-    line-height: 26px;
     font-size: 12px;
-    margin-bottom: 10px;
+    /* padding-top: 10px;
+    color: #444444;
+    font-weight: 600;
+    padding-left: 10px;
+    display: flex; */
   }
 }
 

@@ -33,31 +33,17 @@
           <div class="col-lg-3 col-md-3 col-produk" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="box-header">
-                <img src="<?= base_url('img/Produk/'. $data['foto']) ?>" class="img-fluid" alt="">
+                <img src="<?= base_url('img/Produk/produk1.jpeg') ?>" class="img-fluid" alt="">
               </div>
 
               <div class="nama-product"><span><?= $data['nama']?></span></div>
               <ul>
-                <li>Rp. <?= number_format($data['harga'], 0, ",", ".")?></li>
+                <li>Rp. <?= number_format($data['harga'], 2)?></li>
               </ul>
               <a href="<?= base_url('Produk/detail/' . $data['idProduk']) ?>" class="btn-detail">Detail</a>
             </div>
           </div>
         <?php } ?>
-        <?php if (!$produk) { ?>
-            <div class="alert alert-dark text-center" role="alert">
-                Produk Tidak Ditemukan
-            </div>
-        <?php } ?>
-      </div>
-
-      <div class="container">
-      	<div class="pagination flex-m flex-w p-t-26 justify-content-center">
-      		<?php
-            // Tampilkan link-link paginationnya
-            echo $pagination;
-            ?>
-      	</div>
       </div>
 
     </div>
