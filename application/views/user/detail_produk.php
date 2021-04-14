@@ -39,8 +39,9 @@
 						<h6>Harga:</h6>
 						<h3>Rp. <?= number_format($produk['harga'], 2) ?></h3>
 						<!-- <a href="<?= base_url('Pesan') ?>" class="btn btn-pesan">Pesan Sekarang</a> -->
-						<a href="https://api.whatsapp.com/send?phone=<?= $profile['wa'] ?>&text=Selamat Pagi%21%20Saya%20berminat%20membeli%20<?= $produk['nama'] ?>%20kapasitas%20<?= $produk['kapasitas']?>%20Gram" class="btn btn-pesan">Pesan Sekarang</a>
-						<a href="mailto:<?= $profile['email'] ?>?Subject=Mesin%20Roasting&Body=Selamat%20Pagi%21%20Saya%20ingin%20membeli%20<?= $produk['nama']?>%20kapasitas%20<?= $produk['kapasitas']?>%20Gram" class="btn btn-pesan">Pesan Sekarang</a>
+						<a href="https://api.whatsapp.com/send?phone=<?= $profile['wa'] ?>&text=Selamat Pagi%21%20Saya%20berminat%20membeli%20<?= $produk['nama'] ?>%20kapasitas%20<?= $produk['kapasitas']?>%20Gram" class="btn btn-pesan">Pesan lewat WA</a>
+
+						<a href="mailto:<?= $profile['email'] ?>?Subject=Mesin%20Roasting&Body=Selamat%20Pagi%21%20Saya%20ingin%20membeli%20<?= $produk['nama']?>%20kapasitas%20<?= $produk['kapasitas']?>%20Gram" class="btn btn-pesan-email">Pesan lewat email</a>
 					</div>
 
 				</div>
