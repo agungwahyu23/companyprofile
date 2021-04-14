@@ -23,7 +23,7 @@
         <div class="col-lg-4">
           <form class="d-flex" method="POST">
             <input class="form-control mr-2" name="cari" type="search" placeholder="Cari Produk" aria-label="Search">
-            <button class="btn btn-outline-secondary" type="submit">Cari</button>
+            <button class="btn btn-cari" type="submit">Cari</button>
           </form>
         </div>
       </div>

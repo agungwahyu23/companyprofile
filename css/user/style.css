@@ -976,6 +976,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
     line-height: 36px;
   }
+  #hero-half-detail h1{
+    font-size: 26px;
+  }
   #hero-half h2 {
     font-size: 18px;
     line-height: 24px;
@@ -2244,6 +2247,7 @@ section {
   position: relative;
   overflow: hidden;
   transition: 0.3s;
+  margin-bottom: 30px;
 }
 
 .pricing .box:hover {
@@ -2366,6 +2370,14 @@ section {
 
 .pricing .btn-buy:hover {
   background: #3b8af2;
+}
+
+.pricing .btn-cari{
+  border: 1px solid rgb(148, 148, 148);
+}
+.pricing .btn-cari:hover{
+  background:#0a4d00;
+  color: #fff;
 }
 
 .pricing .btn-detail {

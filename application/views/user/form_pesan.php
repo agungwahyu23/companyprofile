@@ -6,7 +6,7 @@
 <body>
     <?php $this->load->view('user/_partials/navbar.php') ?>
 
-    <section id="hero-half-detail" class="d-flex align-items-center text-center" style="background-image: url(<?= base_url('img/produk/produk10.jpeg'); ?>)">
+    <section id="hero-half-detail" class="d-flex align-items-center text-center" style="background-image: url(<?= base_url('img/Produk/produk10.jpeg'); ?>)">
     	<div class="container" data-aos="zoom-out" data-aos-delay="100">
     		<h1>FORM PEMESANAN</h1>
     	</div>

@@ -11,6 +11,8 @@ class Pesan extends CI_Controller
 
     public function index()
     {
-        $this->load->view('user/form_pesan');
+        $data['profil'] = $this->db->get('profile')->row_array();
+        $data['produk'] = $this->db->get('produk')->result_array();
+        $this->load->view('user/form_pesan', $data);
     }
 }
