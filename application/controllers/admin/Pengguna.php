@@ -3,11 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Pengguna extends CI_Controller
 {
-
     public function __construct()
     {
         parent::__construct();
         $this->load->model('Models');
+        belumlogin();
     }
 
     public function index()
@@ -44,20 +44,24 @@ class Pengguna extends CI_Controller
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
                 Akun Gagal Di Tambahkan
                 </div>');
-                redirect('admin/Admin');
+                redirect('admin/Pengguna');
             }
         }
     }
 
-    public function edit()
+    public function hapus($id = null)
     {
-        $this->load->view('admin/pengguna/edit');
+        if($id){
+            $this->db->delete('pengguna', ['idPengguna' => $id]);
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
+                Pengguna berhasil dihapus
+                </div>');
+                redirect('admin/Pengguna');
+        }else{
+            redirect('admin/Pengguna');
+        }
     }
 
-    public function detail()
-    {
-        $this->load->view('admin/pengguna/detail');
-    }
 }
 
 /* End of file Controllername.php */

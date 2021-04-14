@@ -34,27 +34,47 @@
 											<th>Email</th>
 											<th>Status</th>
 											<th>Bergabung</th>
-											<th>Aksi</th>
+											<?php if ($this->session->userdata('status') == 'Admin') { ?>
+												<th>Aksi</th>
+											<?php } ?>
 										</tr>
 									</thead>
 									<tbody>
 										<?php $i = 1;
 										foreach ($pengguna as $data) { ?>
 											<tr>
-												<td><?= $i?></td>
-												<td><?= $data['nama']?></td>
-												<td><?= $data['email']?></td>
-												<td><?= $data['status']?></td>
-												<td><?= $data['createDate']?></td>
-												<td>
-													<a href="<?= base_url('admin/Pengguna/edit') ?>"><i class="fas fa-cog" style="color:#444"></i></a>
-													<a href="#"><i class="fas fa-trash" style="color:#444"></i></a>
-												</td>
+												<td><?= $i ?></td>
+												<td><?= $data['nama'] ?></td>
+												<td><?= $data['email'] ?></td>
+												<td><?= $data['status'] ?></td>
+												<td><?= $data['createDate'] ?></td>
+												<?php if ($this->session->userdata('status') == 'Admin') { ?>
+													<td>
+														<a onclick="confirm_hapus('<?php echo base_url('admin/Pengguna/hapus/' . $data['idPengguna']) ?>')"><i class="fas fa-trash" style="color:#444"></i></a>
+													</td>
+												<?php } ?>
 											</tr>
 										<?php $i++;
 										} ?>
 									</tbody>
 								</table>
+								<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="deleteModalLabel">Hapus Pengguna</h5>
+												<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">×</span>
+												</button>
+											</div>
+											<div class="modal-body">Apakah Anda yakin untuk menghapus?</div>
+											<div class="modal-footer">
+												<button class="btn btn-primary" type="button" data-dismiss="modal">Batal</button>
+												<a class="btn btn-danger" id="delete_link" type="button" href="">Hapus</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -65,6 +85,14 @@
 	</div>
 
 	<?php $this->load->view("admin/_partials/js.php") ?>
+	<script>
+		function confirm_hapus(add) {
+			$('#modalDelete').modal('show', {
+				backdrop: 'static'
+			});
+			document.getElementById('delete_link').setAttribute('href', add);
+		}
+	</script>
 </body>
 
 </html>

@@ -46,18 +46,37 @@
 												<td><?= $data['nama'] ?></td>
 												<td><?= $data['kapasitas'] ?></td>
 												<td>Rp. <?= number_format($data['harga'], 2) ?></td>
-												<td><a href="<?= base_url('img/Produk/') . $data['foto']?>">Lihat</a></td>
+												<td><a href="<?= base_url('img/Produk/') . $data['foto'] ?>">Lihat</a></td>
 												<td><?= $data['status'] == 1 ? 'Tampil' : 'Tidak Ditampilkan' ?></td>
 												<td>
 													<a href="<?= base_url('admin/Produk/edit/' . $data['idProduk']) ?>"><i class="fas fa-cog" style="color:#444"></i></a>
 													<a href="<?= base_url('admin/Produk/tambahFoto/' . $data['idProduk']) ?>"><i class="fas fa-images" style="color:#444"></i></a>
-													<a href="<?= base_url('admin/Produk/hapus/' . $data['idProduk']) ?>"><i class="fas fa-trash" style="color:#444"></i></a>
+
+
+													<a onclick="confirm_hapus('<?php echo base_url('admin/Produk/hapus/' . $data['idProduk']) ?>')"><i class="fas fa-trash" style="color:#444"></i></a>
 												</td>
 											</tr>
 										<?php $i++;
 										} ?>
 									</tbody>
 								</table>
+								<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="deleteModalLabel">Hapus Produk</h5>
+												<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">×</span>
+												</button>
+											</div>
+											<div class="modal-body">Apakah Anda yakin untuk menghapus produk ini?</div>
+											<div class="modal-footer">
+												<button class="btn btn-primary" type="button" data-dismiss="modal">Batal</button>
+												<a class="btn btn-danger" id="delete_link" type="button" href="">Hapus</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -68,6 +87,14 @@
 	</div>
 
 	<?php $this->load->view("admin/_partials/js.php") ?>
+	<script>
+		function confirm_hapus(add) {
+			$('#modalDelete').modal('show', {
+				backdrop: 'static'
+			});
+			document.getElementById('delete_link').setAttribute('href', add);
+		}
+	</script>
 </body>
 
 </html>

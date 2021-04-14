@@ -21,7 +21,8 @@ class Login extends CI_Controller
 						$data = [
 							'idPengguna' => $pengguna['idPengguna'],
 							'nama' => $pengguna['nama'],
-							'email' => $email
+							'email' => $email,
+							'status' => $pengguna['status']
 						];
 						$this->session->set_userdata($data);
 						redirect('admin/Dashboard');

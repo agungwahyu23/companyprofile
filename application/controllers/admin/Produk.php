@@ -8,6 +8,7 @@ class Produk extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Models');
+        belumlogin();
     }
 
     public function index()
@@ -227,7 +228,7 @@ class Produk extends CI_Controller
 
             $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Produk Berhasil Dihapus</div>');
 
-            redirect('admin/Produk/tambahFoto/' . $id);
+            redirect('admin/Produk');
         } else {
             redirect('admin/Produk');
         }

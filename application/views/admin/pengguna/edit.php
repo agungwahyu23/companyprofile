@@ -21,7 +21,7 @@
 					</ol>
 					<form action="" method="post">
 						<div class="card mb-4">
-							<div class="card-header">Tambah Admin</div>
+							<div class="card-header">Pengaturan Pengguna</div>
 							<div class="card-body">
 								<div class="row">
 									<div class="form-group col-lg-6 col-sm-12">
