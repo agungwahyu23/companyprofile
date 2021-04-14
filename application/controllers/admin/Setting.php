@@ -66,7 +66,7 @@ class Setting extends CI_Controller
             $password = md5($this->input->post('password'));
             if ($password == $data['pengguna']['password']) {
                 $data = [
-                    'password' => $this->input->post('passwordBaru')
+                    'password' => md5($this->input->post('passwordBaru'))
                 ];
                 $this->db->where(['idPengguna' => $id]);
                 $update = $this->db->update('pengguna', $data);
