@@ -970,7 +970,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
   #hero-half {
-    height: 100vh;
+    height: 45vh;
   }
   #hero-half h1 {
     font-size: 28px;
@@ -2339,6 +2339,7 @@ section {
   padding-left: 20px;
   padding-right: 20px;
   align-items: center;
+  text-align: left;
   display: flex;
 }
 
