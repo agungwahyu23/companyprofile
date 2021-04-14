@@ -2026,6 +2026,30 @@ section {
   transition: 0.5s;
   color: #fff;
   background: #17A400;
+  margin-bottom: 10px;
+  width: 250px;
+}
+.portfolio-details .btn-pesan-email{
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: rgb(20, 20, 20);
+  border: 1px solid #17A400;
+  margin-bottom: 10px;
+  width: 250px;
+}
+.portfolio-details .btn-pesan:hover{
+  background: #073800;
+}
+.portfolio-details .btn-pesan-email:hover{
+  background: #129e00;
+  color: #fff;
 }
 
 .portfolio-details .portfolio-details-slider img {
@@ -2116,6 +2140,14 @@ section {
   .portfolio-details .portfolio-info {
     position: static;
     margin-top: 30px;
+  }
+  .portfolio-details .btn-pesan{
+    font-size: 14px;
+    width: 100%;
+  }
+  .portfolio-details .btn-pesan-email{
+    font-size: 14px;
+    width: 100%;
   }
 }
 
