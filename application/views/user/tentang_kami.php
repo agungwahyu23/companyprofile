@@ -28,7 +28,7 @@
           <img src="<?= base_url('img/Produk/produk8.jpeg') ?>" class="img-fluid-about" alt="">
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <h3>Sejarah <?= $profil['nama'] ?></h3>
+          <h3><?= $profil['nama'] ?></h3>
           <!-- <ul>
               <li>
                 <i class="bx bx-store-alt"></i>
@@ -46,7 +46,7 @@
               </li>
             </ul> -->
           <p>
-            didirikan pada tanggal 1 Januari 20225. Pada awalnya merupakan sebuah Workshop biasa yang membuat mesin kopi kususnya mesin sangrai kopi, seiring berjalannya waktu kami mengembangkan diri untuk menjadi produsen mesin roasting asal Jember.
+          <?= $profil['deskripsi'] ?>
           </p>
         </div>
       </div>
@@ -59,7 +59,7 @@
 
       <div class="row">
         <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="100">
-          <img src="<?= base_url('img/ilustrasi/coffee_break.svg') ?>" class="" width="500px" alt="">
+          <img src="<?= base_url('img/ilustrasi/coffee_break.svg') ?>" class="ilustrasi" width="500px" alt="">
         </div>
         <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <ul>

@@ -37,8 +37,8 @@
               </div>
 
               <div class="nama-product"><span><?= $data['nama'] ?></span></div>
+              <div class="kapasitas"><span>Kapasitas <?= $data['kapasitas'] / 1000?> Kg </span></div>
               <ul>
-                <li>Kapasitas <?= $data['kapasitas'] / 1000?> Kg</li>
                 <li>Rp. <?= number_format($data['harga'], 0, ",", ".")?></li>
               </ul>
               <a href="<?= base_url('Produk/detail/' . $data['idProduk']) ?>" class="btn-detail">Detail</a>
