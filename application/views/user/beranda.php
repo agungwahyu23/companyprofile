@@ -29,7 +29,7 @@
 
   <section id="featured-services" class="featured-services">
     <div class="container" data-aos="fade-up">
-      <h1 class="text-center">Mengapa Memilih Aziz Roaster Jember?</h1>
+      <h1 class="text-center">Mengapa Memilih <?= $profil['nama']?>?</h1>
       <div class="row">
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">

@@ -14,9 +14,9 @@
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid">
-					<h1 class="mt-4">Selamat datang, nama login </h1>
+					<h1 class="mt-4">Selamat datang, <?= $this->session->userdata('nama');?> </h1>
 					<ol class="breadcrumb mb-4">
-						<li class="breadcrumb-item active"><h3>Anda login sebagai (status)</h3></li>
+						<li class="breadcrumb-item active"><h3>Anda login sebagai <?= $this->session->userdata('status');?></h3></li>
 					</ol>
 					<div class="row">
 						<div class="col-lg-12 align-item-center text-center">

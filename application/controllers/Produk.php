@@ -5,13 +5,14 @@ class Produk extends CI_Controller {
 
     public function index()
     {
+        $data['profil'] = $this->db->get('profile')->row_array();
         $data['produk'] = $this->db->get('produk')->result_array();
         $this->load->view('user/produk', $data);   
     }
 
     public function detail($id = null)
     {
-        $data['profile'] = $this->db->get_where('profile', ['id' => 1])->row_array();
+        $data['profil'] = $this->db->get_where('profile', ['id' => 1])->row_array();
         if($id){
             $data['galeri'] = $this->db->get_where('galeri', ['idProduk' => $id])->result_array();
             $data['produk'] = $this->db->get_where('produk', ['idProduk' => $id])->row_array();
