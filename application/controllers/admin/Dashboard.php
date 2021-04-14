@@ -11,7 +11,7 @@ class Dashboard extends CI_Controller
 
 	public function index()
 	{
-		// var_dump($this->session->userdata('idPengguna'));die;
+		
         $this->load->view('admin/dashboard');
     }
 }

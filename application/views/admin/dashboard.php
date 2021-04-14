@@ -14,12 +14,15 @@
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid">
-					<h1 class="mt-4">Dashboard</h1>
+					<h1 class="mt-4">Selamat datang, nama login </h1>
 					<ol class="breadcrumb mb-4">
-						<li class="breadcrumb-item active">Dashboard</li>
+						<li class="breadcrumb-item active"><h3>Anda login sebagai (status)</h3></li>
 					</ol>
 					<div class="row">
-						<div class="col-xl-6 col-md-6">
+						<div class="col-lg-12 align-item-center text-center">
+							<img src="<?= base_url('img/logo.png') ?>" style="width:25%" alt="">
+						</div>
+						<!-- <div class="col-xl-3 col-md-6">
 							<div class="card bg-primary text-white mb-4">
 								<div class="card-body">Produk Tersedia</div>
 								<div class="card-footer d-flex align-items-center justify-content-between">
