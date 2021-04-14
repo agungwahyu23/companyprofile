@@ -13,6 +13,7 @@ class Produk extends CI_Controller {
     {
         $data['profile'] = $this->db->get_where('profile', ['id' => 1])->row_array();
         if($id){
+            $data['galeri'] = $this->db->get_where('galeri', ['idProduk' => $id])->result_array();
             $data['produk'] = $this->db->get_where('produk', ['idProduk' => $id])->row_array();
             $this->load->view('user/detail_produk', $data);
         }else{
