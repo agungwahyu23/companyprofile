@@ -36,14 +36,29 @@
                 <img src="<?= base_url('img/Produk/' . $data['foto']) ?>" class="img-fluid" alt="">
               </div>
 
-              <div class="nama-product"><span><?= $data['nama']?></span></div>
+              <div class="nama-product"><span><?= $data['nama'] ?></span></div>
               <ul>
-                <li>Rp. <?= number_format($data['harga'], 2)?></li>
+                <li>Kapasitas <?= $data['kapasitas'] / 1000?> Kg</li>
+                <li>Rp. <?= number_format($data['harga'], 0, ",", ".")?></li>
               </ul>
               <a href="<?= base_url('Produk/detail/' . $data['idProduk']) ?>" class="btn-detail">Detail</a>
             </div>
           </div>
         <?php } ?>
+        <?php if (!$produk) { ?>
+          <div class="alert alert-dark text-center" role="alert">
+            Produk Tidak Ditemukan
+          </div>
+        <?php } ?>
+      </div>
+
+      <div class="container">
+        <div class="pagination flex-m flex-w p-t-26 justify-content-center">
+          <?php
+          // Tampilkan link-link paginationnya
+          echo $pagination;
+          ?>
+        </div>
       </div>
 
     </div>

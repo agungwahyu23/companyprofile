@@ -14,7 +14,7 @@ class Beranda extends CI_Controller
     {
         $data['profil'] = $this->db->get('profile')->row_array();
         $this->db->order_by('rand()');
-        $data['produk'] = $this->db->get_where('produk', ['status' => 1])->result_array();
+        $data['produk'] = $this->db->get_where('produk', ['status' => 1], 4)->result_array();
         $this->load->view('user/beranda', $data);   
     }
 

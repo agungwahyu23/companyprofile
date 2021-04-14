@@ -111,9 +111,10 @@
                 <img src="<?= base_url('img/Produk/produk1.jpeg') ?>" class="img-fluid" alt="">
               </div>
 
-              <div class="nama-product"><span><?= $data['nama'] ?> <?= $data['kapasitas'] ?></span></div>
+              <div class="nama-product"><span><?= $data['nama'] ?></span></div>
               <ul>
-                <li>Rp. <?= number_format($data['harga']) ?></li>
+                <li>Kapasitas <?= $data['kapasitas'] / 1000?> Kg</li>
+                <li>Rp. <?= number_format($data['harga'], 0, ",", ".")?></li>
               </ul>
               <a href="<?= base_url('Produk/detail/' . $data['idProduk']) ?>" class="btn-detail">Selengkapnya</a>
               <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli

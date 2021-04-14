@@ -35,9 +35,9 @@
 
 				<div class="col-lg-5">
 					<div class="portfolio-info">
-						<h3><?= $produk['nama'] ?> <?= $produk['kapasitas'] ?> Gram</h3>
+						<h3><?= $produk['nama'] ?> <?= $produk['kapasitas'] / 1000?> Kg</h3>
 						<h6>Harga:</h6>
-						<h3>Rp. <?= number_format($produk['harga'], 2) ?></h3>
+						<h3>Rp. <?= number_format($produk['harga'], 0, ",", ".")?></h3>
 						<!-- <a href="<?= base_url('Pesan') ?>" class="btn btn-pesan">Pesan Sekarang</a> -->
 						<a href="https://api.whatsapp.com/send?phone=<?= $profil['wa'] ?>&text=Selamat Pagi%21%20Saya%20berminat%20membeli%20<?= $produk['nama'] ?>%20kapasitas%20<?= $produk['kapasitas']?>%20Gram" class="btn btn-pesan">Pesan lewat WA</a>
 
