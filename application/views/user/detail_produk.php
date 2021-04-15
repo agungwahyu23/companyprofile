@@ -137,7 +137,7 @@
 
 								<div class="timeline timeline-inverse">
 
-									<div>
+									<!-- <div>
 										<div class="timeline-item">
 											<div class="timeline-body">
 												<div class="filter-container p-0 row">
@@ -153,6 +153,26 @@
 													</div>
 												</div>
 											</div>
+										</div>
+									</div> -->
+
+									<div class="card-body">
+										<div class="row">
+											<div class="col-sm-2">
+												<a href="<?= base_url('img/Produk/' . $produk['foto']) ?>" data-toggle="lightbox"
+													data-title="sample 1 - white" data-gallery="gallery">
+													<img src="<?= base_url('img/Produk/' . $produk['foto']) ?>" class="img-fluid mb-2" alt="white sample" />
+												</a>
+												
+											</div>
+											<?php foreach ($galeri as $data) { ?>
+											<div class="col-sm-2">
+											
+												<a href="<?= base_url('img/Produk/' . $data['foto']) ?>" data-toggle="lightbox" data-title="sample 1 - white">
+													<img src="<?= base_url('img/Produk/' . $data['foto']) ?>" class="img-fluid mb-2" alt="white sample" />
+												</a>
+												
+											</div><?php } ?>
 										</div>
 									</div>
 

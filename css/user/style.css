@@ -14,11 +14,11 @@ body {
 }
 
 a {
-  color: #106eea;
+  color: #444444;
 }
 
 a:hover {
-  color: #3b8af2;
+  color: #22ea10;
   text-decoration: none;
 }
 
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #106eea;
+  border: 6px solid #22ea10;
   border-top-color: #e2eefd;
   border-radius: 50%;
   width: 60px;
@@ -91,13 +91,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #106eea;
+  background: #22ea10;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #3284f1;
+  background: #11ca00;
   color: #fff;
 }
 
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #106eea;
+  background: #22ea10;
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -554,7 +554,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #062b5b;
+  color: #0b8800;
 }
 
 /* .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
@@ -757,7 +757,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 span {
-  color: #106eea;
+  color: #22ea10;
 }
 
 #hero h2 {
@@ -861,7 +861,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero-half-detail {
   width: 100%;
-  height: 35vh;
+  /* height: 35vh; */
   /* background: url("../../img/hero-bg.jpg") top left; */
   background-size: cover;
   position: relative;
@@ -906,7 +906,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero-half h1 span {
-  color: #106eea;
+  color: #22ea10;
 }
 
 #hero-half h2 {
@@ -972,12 +972,16 @@ h1, h2, h3, h4, h5, h6 {
   #hero-half {
     height: 45vh;
   }
+  #hero-half-detail {
+    height: 30vh;
+  }
   #hero-half h1 {
     font-size: 28px;
     line-height: 36px;
   }
   #hero-half-detail h1{
     font-size: 26px;
+    padding-bottom: 30px;
   }
   #hero-half h2 {
     font-size: 18px;
@@ -2060,8 +2064,9 @@ section {
   background: #073800;
 }
 .portfolio-details .btn-pesan-email:hover{
-  background: #129e00;
+  background: #021100;
   color: #fff;
+  border: none;
 }
 
 .portfolio-details .portfolio-details-slider img {
@@ -2095,7 +2100,7 @@ section {
 }
 
 .portfolio-details .portfolio-info {
-  padding: 30px;
+  padding: 0px 0px 30px 30px;
   /* box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08); */
 }
 
@@ -2318,6 +2323,7 @@ section {
   color: #444444;
   text-align: left;
   padding-left: 20px;
+  padding-right: 20px;
   line-height: 26px;
   font-size: 16px;
   margin-bottom: 10px;
@@ -2598,6 +2604,10 @@ section {
   padding: 20px 0 30px 0;
 }
 
+.contact .info-box a{
+  color: #444444;
+}
+
 .contact .info-box i {
   font-size: 32px;
   color: #00b309;
@@ -2863,7 +2873,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #106eea;
+  color: #777777;
 }
 
 #footer .footer-top .social-links a {

@@ -108,15 +108,15 @@
           <div class="col-lg-3 col-md-3 col-produk" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="box-header">
-                <img src="<?= base_url('img/Produk/produk1.jpeg') ?>" class="img-fluid" alt="">
+                <img src="<?= base_url('img/Produk/'.$data['foto']) ?>" class="img-fluid" alt="">
               </div>
 
               <div class="nama-product"><span><?= $data['nama'] ?></span></div>
+              <div class="kapasitas"><span>Kapasitas <?= $data['kapasitas'] / 1000?> Kg </span></div>
               <ul>
-                <li>Kapasitas <?= $data['kapasitas'] / 1000?> Kg</li>
                 <li>Rp. <?= number_format($data['harga'], 0, ",", ".")?></li>
               </ul>
-              <a href="<?= base_url('Produk/detail/' . $data['idProduk']) ?>" class="btn-detail">Selengkapnya</a>
+              <a href="<?= base_url('Produk/detail/' . $data['idProduk']) ?>" class="btn-detail">Detail</a>
               <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
                   Sekarang</a> -->
             </div>
@@ -188,7 +188,7 @@
           <div class="info-box mb-4">
             <i class="bx bx-map"></i>
             <h3>Alamat</h3>
-            <p><?= $profil['alamat'] ?></p>
+            <p><a href="#"><?= $profil['alamat'] ?></a></p>
           </div>
         </div>
 
@@ -196,7 +196,7 @@
           <div class="info-box  mb-4">
             <i class="bx bx-envelope"></i>
             <h3>Email</h3>
-            <p><?= $profil['email'] ?></p>
+            <p><a href="mailto:<?= $profil['email'] ?>" target="blank"><?= $profil['email'] ?></a></p>
           </div>
         </div>
 
@@ -204,7 +204,7 @@
           <div class="info-box  mb-4">
             <i class="bx bx-phone-call"></i>
             <h3>Telepon / WA</h3>
-            <p><?= $profil['wa'] ?></p>
+            <p><a href="https://api.whatsapp.com/send?phone=<?= $profil['wa'] ?>" target="blank"><?= $profil['wa'] ?></a></p>
           </div>
         </div>
 
