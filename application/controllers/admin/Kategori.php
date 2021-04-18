@@ -46,7 +46,8 @@ class Kategori extends CI_Controller
         if($id){
             $this->form_validation->set_rules('nama', 'Nama Kategori', 'required');
             if($this->form_validation->run() == false){
-                $this->load->view('admin/kategori/edit');
+                $data['kategori'] = $this->db->get_where('kategori', ['idKategori' => $id])->row_array();
+                $this->load->view('admin/kategori/edit', $data);
             }else{
                 $data = [
                     'nama_kategori' => $this->input->post('nama')

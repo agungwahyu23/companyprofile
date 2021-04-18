@@ -18,7 +18,7 @@
 						Data Produk
 					</a>
 					<a class="nav-link" href="<?= base_url('admin/Kategori') ?>">
-						<div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
+						<div class="sb-nav-link-icon"><i class="fas fa-align-justify"></i></div>
 						Data Kategori
 					</a>
 					<!-- <a class="nav-link" href="<?= base_url('admin/Rekening') ?>">
