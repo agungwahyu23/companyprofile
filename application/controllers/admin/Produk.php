@@ -46,8 +46,8 @@ class Produk extends CI_Controller
                 $config['create_thumb']     = TRUE;
                 $config['maintain_ratio']   = TRUE;
                 $config['quality']          = '100%';
-                $config['width']            = 1000;
-                $config['height']           = 1000;
+                $config['width']            = 720;
+                $config['height']           = 720;
                 $config['thumb_marker']     = '';
 
                 $this->load->library('image_lib', $config);
@@ -151,8 +151,8 @@ class Produk extends CI_Controller
                             $config['create_thumb']     = TRUE;
                             $config['maintain_ratio']   = TRUE;
                             $config['quality']          = '50%';
-                            $config['width']            = 1000;
-                            $config['height']           = 1000;
+                            $config['width']            = 720;
+                            $config['height']           = 720;
                             $config['thumb_marker']     = '';
 
                             $this->load->library('image_lib', $config);
@@ -305,8 +305,8 @@ class Produk extends CI_Controller
                 $config['quality']          = '100%';
                 // $config['width']            = 383;
                 // $config['height']           = 259;
-                $config['width']            = 500;
-                $config['height']           = 450;
+                $config['width']            = 720;
+                $config['height']           = 720;
                 $config['thumb_marker']     = '';
 
                 $this->load->library('image_lib', $config);

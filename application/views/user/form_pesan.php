@@ -44,7 +44,7 @@
 											</div>
 											<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12"><label class="small mb-1" for="nomor_telepon">Alamat lengkap</label>
 												<input type="text" class="form-control mb-3" id="nomor_telepon" name="alamat" placeholder="Alamat lengkap" required>
-												<input type="hidden" class="form-control mb-3" id="nomor_telepon" name="produk" placeholder="Alamat lengkap" value="<?= $produk['kapasitas'] ?> Kg" required>
+												<input type="hidden" class="form-control mb-3" id="nomor_telepon" name="produk" placeholder="Alamat lengkap" value="<?= $produk['kapasitas'] / 1000 ?> Kg" required>
 											</div>
 
 										</div>

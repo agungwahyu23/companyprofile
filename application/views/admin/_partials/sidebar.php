@@ -21,11 +21,16 @@
 						<div class="sb-nav-link-icon"><i class="fas fa-credit-card"></i></div>
 						Data Rekening
 					</a> -->
-					<div class="sb-sidenav-menu-heading">Kritik</div>
+					<div class="sb-sidenav-menu-heading">Data Masuk</div>
+					<a class="nav-link" href="<?= base_url('admin/Pemesan') ?>">
+						<div class="sb-nav-link-icon"><i class="fa fa-store"></i></div>
+						Pemesanan
+					</a>
 					<a class="nav-link" href="<?= base_url('admin/Kritik') ?>">
 						<div class="sb-nav-link-icon"><i class="far fa-envelope"></i></div>
 						Kritik Pengunjung
 					</a>
+
 					<div class="sb-sidenav-menu-heading">Setting Akun</div>
 					<a class="nav-link" href="<?= base_url('admin/Profil') ?>">
 						<div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>

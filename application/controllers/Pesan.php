@@ -47,13 +47,14 @@ class Pesan extends CI_Controller
                 ];
 
                 if ($media == 'wa') {
-                    $link = "https://api.whatsapp.com/send?phone=$wa&text=Selamat%20Pagi%2C%20Saya%20%3A%0ANama%20Lengkap%20%3A%20$nama%0AAlamat%20%3A%20$alamat%0ANomor%20Telefon%20%3A%20$nohp%0AEmail%20%3A%20$email%0AIngin%20Membeli%20$namaProduk%20kapasitas%201%$kapasitas%20Kg";
+                    $link = "https://api.whatsapp.com/send?phone=$wa&text=Selamat%20Pagi%2C%20Saya%20%3A%0ANama%20Lengkap%20%3A%20$nama%0AAlamat%20%3A%20$alamat%0ANomor%20Telepon%20%3A%20$nohp%0AEmail%20%3A%20$email%0AIngin%20Membeli%20$namaProduk%20kapasitas%20$kapasitas%20Kg";
 
                     $this->db->insert('transaksi', $data);
 
                     redirect($link);
                 } else if ($media = 'email') {
-                    $link = "mailto:$email?Subject=Mesin%20Roasting&Body=Selamat%20Pagi%2C%20Saya%20%3A%0ANama%20Lengkap%20%3A%20$nama%0AAlamat%20%3A%20$alamat%0ANomor%20Telefon%20%3A%20$nohp%0AEmail%20%3A%20$email%0AIngin%20Membeli%20$namaProduk%20kapasitas%201%$kapasitas%20Kg";
+                    $link = "mailto:$email?Subject=Mesin%20Roasting&Body=Selamat%20Pagi%2C%20Saya%20%3A%0ANama%20Lengkap%20%3A%20$nama%0AAlamat%20%3A%20$alamat%0ANomor%20Telepon%20%3A%20$nohp%0AEmail%20%3A%20$email%0AIngin%20Membeli%20$namaProduk%20kapasitas%20$kapasitas%20Kg";
+
                     $this->db->insert('transaksi', $data);
 
                     redirect($link);
