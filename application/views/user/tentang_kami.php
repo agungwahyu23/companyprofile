@@ -71,7 +71,7 @@
               </div>
             </li>
             <li>
-              <i class="fa fa-group"></i>
+            <i class='bx bxs-group'></i>
               <div>
                 <h5>SDM berkualitas</h5>
                 <p>Terdiri dari Sumber Daya Manusia yang handal dibidangnya untuk menciptakan produk terbaik</p>
@@ -86,7 +86,9 @@
 
   <section id="featured-services" class="featured-services">
     <div class="container" data-aos="fade-up">
-      <h1 class="text-center">Mengapa Memilih Aziz Roaster Jember?</h1>
+    <div class="section-title">
+      <h3 class="text-center">Mengapa Memilih <?= $profil['nama']?>?</h3>
+    </div>
       <div class="row">
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">

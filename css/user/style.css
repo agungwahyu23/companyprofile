@@ -8,6 +8,15 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: url('../../fonts/OpenSans/*');
+}
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url('../../fonts/Roboto/*');
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -750,8 +759,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1 {
   margin: 0;
-  /* font-size: 48px;
-  font-weight: 700; */
+  /* font-size: 48px;*/
+  font-weight: 700; 
   line-height: 56px;
   color: #ffffff;
 }
@@ -1352,6 +1361,7 @@ section {
 .about .content ul h5 {
   font-size: 18px;
   color: #555555;
+  font-weight: 600;
 }
 
 .about .content ul p {

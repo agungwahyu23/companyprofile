@@ -14,8 +14,8 @@
 				<div class="col-lg-3 col-md-6 footer-links">
 					<h4>Kontak Kami</h4>
 					<ul>
-						<li><i class="fa fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=<?= $profil['wa']?>"><?= $profil['wa']?></a></li>
-						<li><i class="fa fa-envelope"></i> <a href="mailto:<?= $profil['email'] ?>?Subject=AzisRoaster&Body="><?= $profil['email']?></a></li>
+						<li><i class='bx bxl-whatsapp'></i> <a href="https://api.whatsapp.com/send?phone=<?= $profil['wa']?>"><?= $profil['wa']?></a></li>
+						<li><i class='bx bxs-envelope'></i> <a href="mailto:<?= $profil['email'] ?>?Subject=AzisRoaster&Body="><?= $profil['email']?></a></li>
 					</ul>
 				</div>
 

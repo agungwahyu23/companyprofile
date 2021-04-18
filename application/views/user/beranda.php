@@ -10,7 +10,7 @@
 
   <section id="hero" class="d-flex align-items-center" style="background-image: url(<?= base_url('img/roasting.jpg'); ?>)">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h1><?= $profil['nama'] ?> <br>JEMBER
+      <h1><?= $profil['nama'] ?>
       </h1>
       <h2>Temukan berbagai produk terbaik kami dengan <br> kualitas dan harga jual terbaik</h2>
       <div class="d-flex">
@@ -29,7 +29,9 @@
 
   <section id="featured-services" class="featured-services">
     <div class="container" data-aos="fade-up">
-      <h1 class="text-center">Mengapa Memilih <?= $profil['nama']?>?</h1>
+    <div class="section-title">
+      <h3 class="text-center">Mengapa Memilih <?= $profil['nama']?>?</h3>
+    </div>
       <div class="row">
         <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
