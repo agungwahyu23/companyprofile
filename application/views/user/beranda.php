@@ -8,7 +8,7 @@
 <body>
   <?php $this->load->view('user/_partials/navbar.php') ?>
 
-  <section id="hero" class="d-flex align-items-center" style="background-image: url(<?= base_url('img/roasting.jpg'); ?>)">
+  <section id="hero" class="d-flex align-items-center" style="background-image: url(<?= base_url('img/produk3.jpg'); ?>)">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <h1><?= $profil['nama'] ?>
       </h1>
