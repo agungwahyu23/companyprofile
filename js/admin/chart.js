@@ -20,6 +20,7 @@
         return n && n['default'] || n;
     }
     
+    
     var colorName = {
         "aliceblue": [240, 248, 255],
         "antiquewhite": [250, 235, 215],

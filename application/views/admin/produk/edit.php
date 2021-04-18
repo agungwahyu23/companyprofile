@@ -27,28 +27,39 @@
 									<div class="form-group col-lg-6 col-sm-12">
 										<label>Nama Produk</label>
 										<?= form_error('nama', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="nama" name="nama" type="text" placeholder="Nama Produk" value="<?= $produk['nama']?>" />
+										<input class="form-control" id="nama" name="nama" type="text" placeholder="Nama Produk" value="<?= $produk['nama'] ?>" />
 									</div>
 									<div class="form-group col-lg-6 col-sm-12">
 										<label>Kapasitas</label>
 										<?= form_error('kapasitas', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="kapasitas" name="kapasitas" type="number" placeholder="Kapasitas Produk" value="<?= $produk['kapasitas']?>" />
+										<input class="form-control" id="kapasitas" name="kapasitas" type="number" placeholder="Kapasitas Produk" value="<?= $produk['kapasitas'] ?>" />
 									</div>
 								</div>
 								<div class="row">
-									<div class="form-group col-lg-6 col-sm-12">
+									<div class="form-group col-lg-4 col-sm-12">
 										<label>Harga</label>
 										<?= form_error('harga', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="harga" name="harga" type="number" placeholder="Harga Produk" value="<?= $produk['harga']?>" />
+										<input class="form-control" id="harga" name="harga" type="number" placeholder="Harga Produk" value="<?= $produk['harga'] ?>" />
 									</div>
 
-									<div class="form-group col-lg-6 col-sm-12">
+									<div class="form-group col-lg-4 col-sm-12">
+										<label>Kategori</label>
+										<?= form_error('idKategori', '<small class="text-danger pl-2">', '</small>'); ?>
+										<select class="form-control" name="idKategori">
+											<option value="">--PILIH KATEGORI--</option>
+											<?php foreach ($kategori as $dataKategori) { ?>
+												<option value="<?= $dataKategori['idKategori'] ?>" <?= $produk['idKategori'] == $dataKategori['idKategori'] ? 'selected' : '' ?>><?= $dataKategori['nama_kategori'] ?></option>
+											<?php } ?>
+										</select>
+
+									</div>
+									<div class="form-group col-lg-4 col-sm-12">
 										<label>Status</label>
 										<?= form_error('status', '<small class="text-danger pl-2">', '</small>'); ?>
 										<select class="form-control" name="status">
 											<option value="">--PILIH STATUS--</option>
-											<option value="1" <?= $produk['status'] == 1 ? 'selected' : ''?>>Tampilkan</option>
-											<option value="2" <?= $produk['status'] == 2 ? 'selected' : ''?>>Tidak Ditampilkan</option>
+											<option value="1" <?= $produk['status'] == 1 ? 'selected' : '' ?>>Tampilkan</option>
+											<option value="2" <?= $produk['status'] == 2 ? 'selected' : '' ?>>Tidak Ditampilkan</option>
 										</select>
 									</div>
 								</div>
@@ -56,7 +67,7 @@
 									<div class="form-group col-lg-6 col-sm-6">
 										<label>Gambar Produk</label>
 										<?= form_error('foto', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input name="foto" id="banner" type="file" accept="image/*" class="form-control border-dark small mb-3" placeholder="" aria-describedby="basic-addon2"  >
+										<input name="foto" id="banner" type="file" accept="image/*" class="form-control border-dark small mb-3" placeholder="" aria-describedby="basic-addon2">
 									</div>
 									<div class="col-sm-12 col-lg-6">
 										<div class="input-group">
@@ -70,14 +81,14 @@
 									<div class="form-group col-lg-12 col-sm-12">
 										<label>Spesifikasi Produk</label>
 										<?= form_error('spesifikasi', '<small class="text-danger pl-2">', '</small>'); ?>
-										<textarea class="form-control" name="spesifikasi" id="deskripsi"><?= $produk['spesifikasi']?></textarea>
+										<textarea class="form-control" name="spesifikasi" id="deskripsi"><?= $produk['spesifikasi'] ?></textarea>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group col-lg-12 col-sm-12">
 										<label>Deskripsi Produk</label>
 										<?= form_error('deskripsi', '<small class="text-danger pl-2">', '</small>'); ?>
-										<textarea class="form-control" name="deskripsi" id="deskripsi"><?= $produk['deskripsi']?></textarea>
+										<textarea class="form-control" name="deskripsi" id="deskripsi"><?= $produk['deskripsi'] ?></textarea>
 									</div>
 								</div>
 							</div>

@@ -36,13 +36,23 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="form-group col-lg-6 col-sm-12">
+									<div class="form-group col-lg-4 col-sm-12">
 										<label>Harga</label>
 										<?= form_error('harga', '<small class="text-danger pl-2">', '</small>'); ?>
 										<input class="form-control" id="harga" name="harga" type="number" placeholder="Harga Produk" />
 									</div>
-									
-									<div class="form-group col-lg-6 col-sm-12">
+									<div class="form-group col-lg-4 col-sm-12">
+										<label>Kategori</label>
+										<?= form_error('idKategori', '<small class="text-danger pl-2">', '</small>'); ?>
+										<select class="form-control" name="idKategori">
+											<option value="">--PILIH KATEGORI--</option>
+											<?php foreach ($kategori as $dataKategori) { ?>
+												<option value="<?= $dataKategori['idKategori'] ?>"><?= $dataKategori['nama_kategori'] ?></option>
+											<?php } ?>
+										</select>
+
+									</div>
+									<div class="form-group col-lg-4 col-sm-12">
 										<label>Status</label>
 										<?= form_error('status', '<small class="text-danger pl-2">', '</small>'); ?>
 										<select class="form-control" name="status">

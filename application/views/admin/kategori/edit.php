@@ -14,10 +14,10 @@
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid">
-					<h1 class="mt-4">Data Kategori</h1>
+					<h1 class="mt-4">Edit Kategori</h1>
 					<ol class="breadcrumb mb-4">
 						<li class="breadcrumb-item"><a href="<?= base_url('admin/Dashboard') ?>">Dashboard</a></li>
-						<li class="breadcrumb-item active">Data Kategori</li>
+						<li class="breadcrumb-item active">Edit Kategori</li>
 					</ol>
 					<form action="" method="post">
 						<div class="card mb-4">
@@ -26,8 +26,8 @@
 								<div class="row">
 									<div class="form-group col-lg-4 col-sm-12">
 										<label>Nama Kategori</label>
-										<?= form_error('name', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="name" name="name" type="text" placeholder="Nama Kategori" />
+										<?= form_error('nama', '<small class="text-danger pl-2">', '</small>'); ?>
+										<input class="form-control" id="nama" name="nama" type="text" placeholder="Nama Kategori" />
 									</div>
 								</div>
 							</div>

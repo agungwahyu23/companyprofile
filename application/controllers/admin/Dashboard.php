@@ -11,7 +11,14 @@ class Dashboard extends CI_Controller
 
 	public function index()
 	{
+		$pengunjung =  $this->db->query("SELECT COUNT(id_pengunjung) as count,MONTHNAME(tanggal) as month_name FROM pengunjung WHERE YEAR(tanggal) = '" . date('Y') . "' GROUP BY YEAR(tanggal), MONTH(tanggal)")->result_array();
+
+		foreach ($pengunjung as $p) {
+			$data['tanggal'][] = $p['month_name'];
+			$data['jumlah'][] = (int)$p['count'];
+		}
 		
-        $this->load->view('admin/dashboard');
+		$data['grafik'] = json_encode($data);
+        $this->load->view('admin/dashboard', $data);
     }
 }

@@ -43,7 +43,8 @@ class Pesan extends CI_Controller
                     'email' => $emailPembeli,
                     'alamat' => $alamat,
                     'nohp' => $nohp,
-                    'produk' => $produkPemesanan
+                    'produk' => $namaProduk,
+                    'kapasitas' => $kapasitas
                 ];
 
                 if ($media == 'wa') {

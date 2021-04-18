@@ -26,8 +26,8 @@
 								<div class="row">
 									<div class="form-group col-lg-4 col-sm-12">
 										<label>Nama Kategori</label>
-										<?= form_error('name', '<small class="text-danger pl-2">', '</small>'); ?>
-										<input class="form-control" id="name" name="name" type="text"
+										<?= form_error('nama', '<small class="text-danger pl-2">', '</small>'); ?>
+										<input class="form-control" id="nama" name="nama" type="text"
 											placeholder="Nama Kategori" />
 									</div>
 								</div>

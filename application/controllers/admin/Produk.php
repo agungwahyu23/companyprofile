@@ -22,11 +22,13 @@ class Produk extends CI_Controller
         $this->form_validation->set_rules('nama', 'Nama Produk', 'required');
         $this->form_validation->set_rules('kapasitas', 'Kapasitas Produk', 'required');
         $this->form_validation->set_rules('status', 'Status Produk', 'required');
+        $this->form_validation->set_rules('idKategori', 'Kategori Produk', 'required');
         $this->form_validation->set_rules('harga', 'Harga Produk', 'required');
         $this->form_validation->set_rules('deskripsi', 'Deskripsi Produk', 'required');
         $this->form_validation->set_rules('spesifikasi', 'Spesifikasi Produk', 'required');
         if ($this->form_validation->run() == false) {
-            $this->load->view('admin/produk/add');
+            $data['kategori'] = $this->db->get('kategori')->result_array();
+            $this->load->view('admin/produk/add', $data);
         } else {
 
             $config['allowed_types'] = 'jpg|png|gif|jpeg';
@@ -55,6 +57,7 @@ class Produk extends CI_Controller
 
                 $data = [
                     'idProduk' => $this->Models->randomkode(32),
+                    'idKategori' => $this->input->post('idKategori'),
                     'nama' => $this->input->post('nama'),
                     'kapasitas' => $this->input->post('kapasitas'),
                     'harga' => $this->input->post('harga'),
@@ -91,17 +94,20 @@ class Produk extends CI_Controller
         if ($id) {
             $this->form_validation->set_rules('nama', 'Nama Produk', 'required');
             $this->form_validation->set_rules('kapasitas', 'Kapasitas Produk', 'required');
+            $this->form_validation->set_rules('idKategori', 'Kategori Produk', 'required');
             $this->form_validation->set_rules('status', 'Status Produk', 'required');
             $this->form_validation->set_rules('harga', 'Harga Produk', 'required');
             $this->form_validation->set_rules('deskripsi', 'Deskripsi Produk', 'required');
             $this->form_validation->set_rules('spesifikasi', 'Spesifikasi Produk', 'required');
 
             if ($this->form_validation->run() == false) {
+                $data['kategori'] = $this->db->get('kategori')->result_array();
                 $data['produk'] = $this->db->get_where('produk', ['idProduk' => $id])->row_array();
                 $this->load->view('admin/produk/edit', $data);
             } else {
                 $data = [
                     'nama' => $this->input->post('nama'),
+                    'idKategori' => $this->input->post('idKategori'),
                     'kapasitas' => $this->input->post('kapasitas'),
                     'harga' => $this->input->post('harga'),
                     'status' => $this->input->post('status'),

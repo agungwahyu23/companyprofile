@@ -32,6 +32,7 @@
 											<th>Nomor Telefon</th>
 											<th>Alamat</th>
 											<th>Produk</th>
+											<th>kapasitas</th>
 											<th>Aksi</th>
 										</tr>
 									</thead>
@@ -44,7 +45,8 @@
 												<td><?= $data['email']?></td>
 												<td><a href="https://api.whatsapp.com/send?phone=+62<?= substr($data['nohp'], 1)?>"><?= $data['nohp']?></a></td>
 												<td><?= $data['alamat']?></td>
-												<td>Mesin Roasting <?= $data['produk'] ?></td>
+												<td><?= $data['produk'] ?></td>
+												<td><?= $data['kapasitas'] ?> Kg</td>
 												<td>
 													<a href="<?= base_url('admin/pemesan/hapus/' . $data['idTransaksi'])?>"><i class="fas fa-trash" style="color:#444"></i></a>
 												</td>

@@ -19,6 +19,7 @@
 						<li class="breadcrumb-item"><a href="<?= base_url('admin/Dashboard') ?>">Dashboard</a></li>
 						<li class="breadcrumb-item active">Data Kategori</li>
 					</ol>
+					<?php echo $this->session->flashdata('pesan') ?>
 					<div class="card mb-4">
 						<div class="card-header">
 							<a href="<?= base_url('admin/kategori/add') ?>" class="btn btn-success">Tambah Kategori</a>
@@ -36,14 +37,15 @@
 									<tbody>
 										<?php $i = 1;
 										foreach ($kategori as $data) { ?>
-										<tr>
-											<td><?= $i ?></td>
-											<td><?= $data['nama_kategori'] ?></td>
-                                            <a href="<?= base_url('admin/Kategori/edit') ?>"><i class="fas fa-cog" style="color:#444"></i></a>
+											<tr>
+												<td><?= $i ?></td>
+												<td><?= $data['nama_kategori'] ?></td>
+												<td>
+													<a href="<?= base_url('admin/Kategori/edit/' . $data['idKategori']) ?>"><i class="fas fa-cog" style="color:#444"></i></a>
 
-											<a onclick="confirm_hapus('<?php echo base_url('admin/Kategori/hapus/' . $data['idKategori']) ?>')"><i class="fas fa-trash" style="color:#444"></i></a>
-                                            </td>
-										</tr>
+													<!-- <a onclick="confirm_hapus('<?php echo base_url('admin/Kategori/hapus/' . $data['idKategori']) ?>')"><i class="fas fa-trash" style="color:#444"></i></a> -->
+												</td>
+											</tr>
 										<?php $i++;
 										} ?>
 									</tbody>
@@ -72,9 +74,9 @@
 			</main>
 			<?php $this->load->view("admin/_partials/footer.php") ?>
 		</div>
-    </div>
-    
-    <?php $this->load->view("admin/_partials/js.php") ?>
+	</div>
+
+	<?php $this->load->view("admin/_partials/js.php") ?>
 	<script>
 		function confirm_hapus(add) {
 			$('#modalDelete').modal('show', {
