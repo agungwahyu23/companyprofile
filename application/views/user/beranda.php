@@ -105,7 +105,7 @@
         <p>Berbagai mesin roasting kopi dengan kualitas terbaik kami hadirkan untuk Anda.</p>
       </div>
 
-      <div class="row mb-2">
+      <div class="row produk">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 kateg">
           <h4>Mesin Sangrai</h4>
         </div>
@@ -138,7 +138,7 @@
         <?php } ?>
       </div>
 
-      <div class="row mb-2">
+      <div class="row produk">
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 kateg">
           <h4>Produk Lainnya</h4>
         </div>
@@ -151,7 +151,7 @@
       </div>
 
       <div class="row gy-4" data-aos="fade-left">
-        <?php foreach ($produk as $data) { ?>
+        <?php foreach ($pengupas as $data) { ?>
           <div class="col-lg-3 col-md-3 col-produk" data-aos="zoom-in" data-aos-delay="200">
             <div class="box">
               <div class="box-header">

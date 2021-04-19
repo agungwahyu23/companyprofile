@@ -16,6 +16,9 @@ class Beranda extends CI_Controller
         $data['kategori'] = $this->db->get('kategori')->result_array();
         $this->db->order_by('rand()');
         $data['produk'] = $this->db->get_where('produk', ['status' => 1], 4)->result_array();
+        $data['produk'] = $this->db->get_where('produk', ['idKategori' => 1], 4)->result_array();
+        $data['pengupas'] = $this->db->get_where('produk', ['status' => 1], 4)->result_array();
+        $data['pengupas'] = $this->db->get_where('produk', ['idKategori' => 2], 4)->result_array();
 
         $datanya = [
 			'tanggal' => date('Y-m-d'),
