@@ -11,6 +11,7 @@ class Pesan extends CI_Controller
 
     public function index($media, $id = null)
     {
+        $data['kategori'] = $this->db->get('kategori')->result_array();
         if ($id && $media) {
 
             $this->form_validation->set_rules('nama', 'Nama Lengkap', 'required');

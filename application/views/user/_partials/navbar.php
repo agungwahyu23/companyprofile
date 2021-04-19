@@ -24,27 +24,20 @@
 		<nav class="nav-menu d-none d-lg-block">
 			<ul>
 				<li><a class="nav-link active" href="<?= base_url('Beranda') ?>">Beranda</a></li>
-				<li><a class="nav-link active" href="<?= base_url('Produk') ?>">Produk</a></li>
-				<li><a class="nav-link active" href="<?= base_url('TentangKami') ?>">Tentang Kami</a></li>
-				<li><a class="nav-link active" href="<?= base_url('KontakKami') ?>">Kontak Kami</a></li>
-				<!-- <li class="drop-down"><a href="">Drop Down</a>
+				<!-- <li><a class="nav-link active" href="<?= base_url('Produk') ?>">Produk</a></li> -->
+				<li class="drop-down"><a href="">Produk</a>
 					<ul>
-						<li><a href="#">Drop Down 1</a></li>
-						<li class="drop-down"><a href="#">Deep Drop Down</a>
-							<ul>
-								<li><a href="#">Deep Drop Down 1</a></li>
-								<li><a href="#">Deep Drop Down 2</a></li>
-								<li><a href="#">Deep Drop Down 3</a></li>
-								<li><a href="#">Deep Drop Down 4</a></li>
-								<li><a href="#">Deep Drop Down 5</a></li>
-							</ul>
-						</li>
+						<?php foreach ($kategori as $data) { ?>
+						<li><a href="#"><?= $data['nama_kategori'] ?></a></li>
+						<?php } ?>
+						<!-- <li><a href="#">Deep Drop Down</a></li>
 						<li><a href="#">Drop Down 2</a></li>
 						<li><a href="#">Drop Down 3</a></li>
-						<li><a href="#">Drop Down 4</a></li>
+						<li><a href="#">Drop Down 4</a></li> -->
 					</ul>
-				</li> -->
-
+				</li>
+				<li><a class="nav-link active" href="<?= base_url('TentangKami') ?>">Tentang Kami</a></li>
+				<li><a class="nav-link active" href="<?= base_url('KontakKami') ?>">Kontak Kami</a></li>
 			</ul>
 		</nav><!-- .nav-menu -->
 

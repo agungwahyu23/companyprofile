@@ -13,6 +13,7 @@ class KontakKami extends CI_Controller
     public function index()
     {
         $data['profil'] = $this->db->get('profile')->row_array();
+        $data['kategori'] = $this->db->get('kategori')->result_array();
         $this->load->view('user/kontak_kami', $data);   
     }
 }
