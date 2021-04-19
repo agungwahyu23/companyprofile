@@ -110,7 +110,7 @@
           <h4>Mesin Sangrai</h4>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 lengkap">
-          <a href="#">
+          <a href="<?= base_url('Produk/index/1')?>">
             <!-- <i class='bx bx-right-arrow-alt text-align-right'></i> -->
             Selengkapnya
           </a>
@@ -143,7 +143,7 @@
           <h4>Produk Lainnya</h4>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 lengkap">
-          <a href="#">
+          <a href="<?= base_url('Produk/index/2')?>">
             <!-- <i class='bx bx-right-arrow-alt text-align-right'></i> -->
             Selengkapnya
           </a>
