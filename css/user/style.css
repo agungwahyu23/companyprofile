@@ -2275,12 +2275,26 @@ section {
   margin-bottom: 30px;
 }
 
+@media (min-width:0px) and (max-width:768px) {
+  .pricing .lengkap{
+    width: 50%;
+  }
+  .pricing .kateg{
+    width: 50%;
+  }
+}
+
+
 .pricing .lengkap{
-  font-size: 90px;
+  text-align-last: right;
+}
+
+.pricing h4{
+  font-weight: 600;
 }
 
 .pricing .box:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
 

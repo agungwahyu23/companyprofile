@@ -105,11 +105,44 @@
         <p>Berbagai mesin roasting kopi dengan kualitas terbaik kami hadirkan untuk Anda.</p>
       </div>
 
-      <div class="row">
-        <div class="col-lg-8">
-          Nama kategori
+      <div class="row mb-2">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 kateg">
+          <h4>Mesin Sangrai</h4>
         </div>
-        <div class="col-lg-4 col-md-3 lengkap">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 lengkap">
+          <a href="#">
+            <!-- <i class='bx bx-right-arrow-alt text-align-right'></i> -->
+            Selengkapnya
+          </a>
+        </div>
+      </div>
+
+      <div class="row gy-4" data-aos="fade-left">
+        <?php foreach ($produk as $data) { ?>
+          <div class="col-lg-3 col-md-3 col-produk" data-aos="zoom-in" data-aos-delay="200">
+            <div class="box">
+              <div class="box-header">
+                <img src="<?= base_url('img/Produk/'.$data['foto']) ?>" class="img-fluid" alt="">
+              </div>
+
+              <div class="nama-product"><span><?= $data['nama'] ?></span></div>
+              <div class="kapasitas"><span>Kapasitas <?= $data['kapasitas'] / 1000?> Kg </span></div>
+              <ul>
+                <li>Rp. <?= number_format($data['harga'], 0, ",", ".")?></li>
+              </ul>
+              <a href="<?= base_url('Produk/detail/' . $data['idProduk']) ?>" class="btn-detail">Detail</a>
+              <!-- <a href="<?= base_url('Produk/DetailProduk/') ?>" class="btn-choose">Beli
+                  Sekarang</a> -->
+            </div>
+          </div>
+        <?php } ?>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 kateg">
+          <h4>Produk Lainnya</h4>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 lengkap">
           <a href="#">
             <!-- <i class='bx bx-right-arrow-alt text-align-right'></i> -->
             Selengkapnya
