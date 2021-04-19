@@ -22,7 +22,7 @@
 					</ol>
 					<div class="row">
 						<div class="col-lg-12 align-item-center text-center">
-							<img src="<?= base_url('img/logo.png') ?>" style="width:25%" alt="">
+							<img src="<?= base_url('img/logo1.png') ?>" style="width:25%" alt="">
 						</div>
 						<!-- <div class="col-xl-3 col-md-6">
 							<div class="card bg-primary text-white mb-4">

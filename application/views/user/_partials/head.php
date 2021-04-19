@@ -2,8 +2,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Coffe Roaster</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content=" " name="description">
+  <meta content=" " name="keywords">
 
   <!-- Favicons -->
   <link href="<?= base_url('img/favicon.png') ?>" rel="icon">
