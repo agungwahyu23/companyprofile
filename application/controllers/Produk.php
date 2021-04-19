@@ -80,7 +80,7 @@ class Produk extends CI_Controller {
 
 
         //konfigurasi pagination
-        $config['base_url']                = base_url() . 'produk/index/';
+        $config['base_url']                = base_url() . 'produk/index/'.$idKategori.'/index/';
         $config['total_rows']            =  $total;
         $config['use_page_numbers']        = TRUE;
         $config['per_page']                = 12;
@@ -106,7 +106,7 @@ class Produk extends CI_Controller {
         $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
         $config['last_tagl_close']  = '</span></li>';
 
-        $config['first_url']            = base_url() . 'produk/index';
+        $config['first_url']            = base_url() . 'produk/kategori/'.$idKategori;
 
         $this->pagination->initialize($config); // Set konfigurasi paginationnya
         $page         = ($this->uri->segment(3)) ? ($this->uri->segment(3) - 1) * $config['per_page'] : 0;

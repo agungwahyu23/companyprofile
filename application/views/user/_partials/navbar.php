@@ -28,7 +28,7 @@
 				<li class="drop-down"><a href="Produk">Produk</a>
 					<ul>
 						<?php foreach ($kategori as $data) { ?>
-						<li><a href="<?php echo base_url('produk/kategori/') ?>"><?= $data['nama_kategori'] ?></a></li>
+						<li><a href="<?php echo base_url('produk/kategori/'.$data['idKategori']) ?>"><?= $data['nama_kategori'] ?></a></li>
 						<?php } ?>
 						<!-- <li><a href="#">Deep Drop Down</a></li>
 						<li><a href="#">Drop Down 2</a></li>
