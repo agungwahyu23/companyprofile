@@ -111,7 +111,7 @@ class Produk extends CI_Controller {
         $this->pagination->initialize($config); // Set konfigurasi paginationnya
         $page         = ($this->uri->segment(3)) ? ($this->uri->segment(3) - 1) * $config['per_page'] : 0;
 
-        $data['produk'] = $this->db->get('kategori', $config['per_page'], $page)->result_array();
+        $data['produk'] = $this->db->get('produk', $config['per_page'], $page)->result_array();
 
         $data['pagination'] = $this->pagination->create_links();
 

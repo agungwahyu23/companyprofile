@@ -46,7 +46,7 @@
           </div>
         <?php } ?>
         <?php if (!$produk) { ?>
-          <div class="alert alert-dark text-center" role="alert">
+          <div class="alert text-center" role="alert">
             Produk Tidak Ditemukan
           </div>
         <?php } ?>
