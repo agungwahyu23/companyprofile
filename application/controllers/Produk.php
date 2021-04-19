@@ -6,15 +6,21 @@ class Produk extends CI_Controller
 
     public function index($kategori = null)
     {
-
+        $cari = $this->input->post('cari');
 
         $data['profil'] = $this->db->get('profile')->row_array();
-        $data['produk'] = $this->db->get('produk')->result_array();
+        // $data['produk'] = $this->db->get('produk')->result_array();
         $data['kategori'] = $this->db->get('kategori')->result_array();
 
 
         if ($kategori) {
-            $total = $this->db->get_where('produk', ['idKategori' => $kategori])->num_rows();
+            if ($this->input->post('cari')) {
+                $cari = $this->input->post('cari');
+                $this->db->like('nama', $cari);
+                $total = $this->db->get('produk')->num_rows();
+            } else {
+                $total = $this->db->get_where('produk', ['idKategori' => $kategori])->num_rows();
+            }
         } else {
             if ($this->input->post('cari')) {
                 $cari = $this->input->post('cari');
@@ -65,7 +71,13 @@ class Produk extends CI_Controller
 
 
         if ($kategori) {
-            $data['produk'] = $this->db->get_where('produk', ['idKategori' => $kategori])->result_array();
+            if ($cari) {
+                $this->db->like('nama', $cari);
+                $data['produk'] = $this->db->get('produk')->result_array();
+            } else {
+                $this->db->where(['idKategori' => $kategori]);
+                $data['produk'] = $this->db->get('produk')->result_array();
+            }
         } else {
             if ($cari) {
                 $this->db->like('nama', $cari);
@@ -135,18 +147,18 @@ class Produk extends CI_Controller
     //     $this->load->view('user/produk', $data);
     // }
 
-    // public function detail($id = null)
-    // {
-    //     $data['kategori'] = $this->db->get('kategori')->result_array();
-    //     $data['profil'] = $this->db->get_where('profile', ['id' => 1])->row_array();
-    //     if($id){
-    //         $data['galeri'] = $this->db->get_where('galeri', ['idProduk' => $id])->result_array();
-    //         $data['produk'] = $this->db->get_where('produk', ['idProduk' => $id])->row_array();
-    //         $this->load->view('user/detail_produk', $data);
-    //     }else{
-    //         redirect(base_url('Produk'));
-    //     }
-    // }
+    public function detail($id = null)
+    {
+        $data['kategori'] = $this->db->get('kategori')->result_array();
+        $data['profil'] = $this->db->get_where('profile', ['id' => 1])->row_array();
+        if($id){
+            $data['galeri'] = $this->db->get_where('galeri', ['idProduk' => $id])->result_array();
+            $data['produk'] = $this->db->get_where('produk', ['idProduk' => $id])->row_array();
+            $this->load->view('user/detail_produk', $data);
+        }else{
+            redirect(base_url('Produk'));
+        }
+    }
 
 }
 

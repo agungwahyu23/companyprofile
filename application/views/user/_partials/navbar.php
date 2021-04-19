@@ -25,10 +25,11 @@
 			<ul>
 				<li><a class="nav-link active" href="<?= base_url('Beranda') ?>">Beranda</a></li>
 				<!-- <li><a class="nav-link active" href="<?= base_url('Produk') ?>">Produk</a></li> -->
-				<li class="drop-down"><a href="<?= base_url('Produk') ?>">Produk</a>
+				<li class="drop-down"><a href="#">Produk</a>
 					<ul>
+						<li><a href="<?php echo base_url('Produk') ?>">Semua Produk</a></li>
 						<?php foreach ($kategori as $data) { ?>
-						<li><a href="<?php echo base_url('Produk/index/'.$data['idKategori']) ?>"><?= $data['nama_kategori'] ?></a></li>
+							<li><a href="<?php echo base_url('Produk/index/' . $data['idKategori']) ?>"><?= $data['nama_kategori'] ?></a></li>
 						<?php } ?>
 						<!-- <li><a href="#">Deep Drop Down</a></li>
 						<li><a href="#">Drop Down 2</a></li>
